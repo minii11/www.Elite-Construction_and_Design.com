@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM Skills Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the company name */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+            position: absolute;
+            left: 15px;
+        }
+
+        header h1 {
+            color: purple;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: purple;
+            position: absolute;
+            right: 15px;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 70px; /* Positioned below the header */
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #ffcc99;
+            z-index: 1100;
+        }
+
+        .sidebar a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 22px; /* Increased font size */
+            color: #ffcc99;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            margin-top: 80px; /* Ensure content starts below the header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sticker {
+            background-color: #ffffff;
+            border-radius: 12px; /* Increased border radius */
+            padding: 30px; /* Increased padding */
+            margin: 20px auto; /* Increased margin */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Increased box-shadow */
+            font-size: 20px; /* Increased font size */
+            display: inline-block;
+            width: calc(100% - 40px);
+            max-width: 700px; /* Increased max width */
+            transition: transform 0.2s;
+        }
+
+        .sticker:hover {
+            transform: scale(1.05); /* Slightly increased scale on hover */
+            cursor: pointer;
+        }
+
+        .icon {
+            width: 60px; /* Increased icon size */
+            height: 60px;
+            display: inline-block;
+            margin-right: 15px; /* Increased margin */
+            vertical-align: middle;
+            transition: fill 0.2s;
+        }
+
+        .dark-purple {
+            fill: darkmagenta; /* Dark purple */
+        }
+
+        .sticker:hover .icon {
+            fill: #ff7f50; /* Coral orange */
+        }
+
+        .header {
+            font-size: 32px; /* Increased font size */
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .message {
+            font-size: 20px; /* Increased font size */
+            color: #a9a9a9; /* Light grey */
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .sticker {
+                font-size: 20px; /* Adjust font size for mobile */
+                padding: 20px; /* Adjust padding for mobile */
+            }
+
+            header h1 {
+                font-size: 20px; /* Adjust header font size for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sticker {
+                font-size: 18px; /* Further reduce font size for very small screens */
+                padding: 15px; /* Further reduce padding for very small screens */
+            }
+
+            header h1 {
+                font-size: 18px; /* Further reduce header font size for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="image.jpg" alt="HM Skills Logo">
+        <h1>HM Skills</h1>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header"><strong>Contact Us</strong> </div>
+        
+     <img src="./img 8.jpg" alt="">
+
+        <div class="message">
+            We are at your service, ready to provide guidance and support. Your satisfaction is our priority. Reach out to us for assistance anytime.
+        </div>
+
+
+        
+        <!-- Email Sticker -->
+
+<div class="sticker">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path class="dark-purple" d="M12 13.5l-11-7V5l11 7 11-7v1.5l-11 7zM0 9l12 8 12-8V19H0V9z"/>
+    </svg>
+    <span style="font-size: 16px;">Email: <strong>contacthmskills@gmail.com</strong></span>
+</div>
+
+        
+       
+
+        <!-- Contact Sticker -->
+        <div class="sticker">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path class="dark-purple" d="M6.62 10.79c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zm11.09-5.18c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zM12 2C7.06 2 3 6.06 3 11c0 3.87 3.13 7 7 7 1.48 0 2.86-.48 4-1.29L21 22l1-1-6.29-6.29C16.52 13.86 17 12.48 17 11c0-4.94-4.06-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.48-.48 2.86-1.29 4L12 13.59V10h-2V8h2V6h-2V4h2z"/>
+            </svg>
+            <span>Contact: <strong>03212161650</strong></span>
+        </div>
+
+
+
+
+        
+        <!-- Location Sticker -->
+        <div class="sticker">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path class="dark-purple" d="M12 2C8.1 2 5 5.1 5 9c0 2.9 4 7 7 11 3-4 7-8.1 7-11 0-3.9-3.1-7-7-7zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+            </svg>
+            <span>Location: <strong>Faisalabad Jhang Road, Moter Market, Punjab, Pakistan</strong></span>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
