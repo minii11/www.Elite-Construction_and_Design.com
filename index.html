@@ -184,6 +184,59 @@ p {
     font-size: 0.6em;
 }
 
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-container .btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent light white */
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .image-container .btn:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly more visible on hover */
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%; /* Adjust to fit smaller screens */
+            }
+
+            .image-container .btn {
+                font-size: 14px; /* Smaller text on mobile */
+                padding: 8px 16px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -289,6 +342,36 @@ p {
   });
 </script>
 
+<br>
+         <!-- Construction -->
+    <a href="construction.html" class="image-container">
+        <img src="construction.jpg" alt="Construction Image">
+        <button class="btn">Explore Construction</button>
+    </a>
+
+    <!-- Real Estate -->
+    <a href="real-estate.html" class="image-container">
+        <img src="real-estate.jpg" alt="Real Estate Image">
+        <button class="btn">Explore Real Estate</button>
+    </a>
+
+    <!-- Renovation -->
+    <a href="renovation.html" class="image-container">
+        <img src="renovation.jpg" alt="Renovation Image">
+        <button class="btn">Explore Renovation</button>
+    </a>
+
+    <!-- Rentals -->
+    <a href="rentals.html" class="image-container">
+        <img src="rentals.jpg" alt="Rentals Image">
+        <button class="btn">Explore Rentals</button>
+    </a>
+
+    <!-- Designs -->
+    <a href="designs.html" class="image-container">
+        <img src="designs.jpg" alt="Designs Image">
+        <button class="btn">Explore Designs</button>
+    </a>
 
             <!-- Services Section -->
     <section class="services container">
