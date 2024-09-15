@@ -213,6 +213,80 @@ p {
             At <strong>Elite Construction & Design📊</strong>, We pride ourselves on delivering top-tier construction services 🏗️ tailored to meet your individual needs🏡 . Whether it's a new build 🧱 , a renovation 🖼️, or a custom design 📐, our expert team is dedicated to bringing your vision to life with unparalleled craftsmanship and attention to detail🚧📊.
             <br><br>
 
+              <img src="image0.jpg" alt=" Home Design">
+            <div class="image-slider">
+  <div class="slider">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+  </div>
+</div>
+
+<style>
+  .image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth; /* Smooth scrolling for user control */
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slider img {
+    width: 100%; /* Ensure each image takes full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images fill the container while keeping proportion */
+    flex-shrink: 0;
+  }
+</style>
+
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.slider img');
+  const totalImages = images.length;
+
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  // Automatic scrolling
+  let autoScroll = setInterval(showNextImage, 5000); // Slow down auto-scroll (5 seconds)
+
+  // Swipe control for mobile (manual scroll)
+  let startX;
+  const slider = document.querySelector('.image-slider');
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    clearInterval(autoScroll); // Stop auto scroll when user interacts
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    const touchX = e.touches[0].clientX;
+    const swipeDistance = startX - touchX;
+
+    if (swipeDistance > 50) {
+      // Swipe left (next image)
+      showNextImage();
+    } else if (swipeDistance < -50) {
+      // Swipe right (previous image)
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  });
+
+  // Restart auto-scroll after user interaction
+  slider.addEventListener('touchend', () => {
+    autoScroll = setInterval(showNextImage, 5000); // Restart after 5 seconds
+  });
+</script>
+
+
             <!-- Services Section -->
     <section class="services container">
         <h2>Our Services</h2>
