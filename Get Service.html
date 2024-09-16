@@ -10,12 +10,63 @@
     <meta property="og:url" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/">
     
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgrey; /* Light grey */
+            color: #333; /* Dark grey text */
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px 30px;
+            background-color: #fff; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: relative;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B; /* Hunter green */
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1; /* Allow h1 to take available space */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #355E3B; /* Hunter green */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         .image-slider {
             position: relative;
             width: 100%;
-            height: calc(100vh - 56px); /* Fill the screen height minus the header height */
+            height: 100vh; /* Use full viewport height */
             overflow: hidden;
         }
+
         .slide {
             position: absolute;
             width: 100%;
@@ -24,8 +75,142 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+
         .slide.active {
             opacity: 1;
+        }
+
+        .hero {
+            background-image: url('your-image-url.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .cta-button {
+            background-color: #FF5722; /* Orange */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #FBE106; /* Light yellow */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            background-color: #fff; /* White background for the form */
+            border: 2px solid #ffcc00; /* Yellow border */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* Max width for better alignment */
+            margin: auto; /* Center the form */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e0e0e0; /* Light grey */
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #4F7942; /* Hunter green */
+        }
+
+        button {
+            background-color: #4F7942; /* Hunter green */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3a5d32; /* Darker green on hover */
+        }
+
+        footer {
+            background-color: #355E3B; /* Hunter green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row; /* Align items in a row */
+                justify-content: center; /* Center header content horizontally */
+            }
+
+            header img {
+                position: absolute;
+                left: 15px;
+            }
+
+            header h1 {
+                font-size: 20px; /* Adjust font size for smaller screens */
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            nav {
+                display: none; /* Hide navigation on smaller screens */
+            }
+
+            .cta-button {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -42,199 +227,13 @@
         </nav>
     </header>
 
+    <!-- Image Slider -->
     <div class="image-slider">
         <img src="image1.jpg" alt="Image 1" class="slide active">
         <img src="image2.jpg" alt="Image 2" class="slide">
         <img src="image3.jpg" alt="Image 3" class="slide">
         <img src="image4.jpg" alt="Image 4" class="slide">
     </div>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: lightgrey; /* Light grey */
-            margin: 0;
-            color: #333; /* Dark grey text */
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            align-items: center; /* Center items vertically */
-            justify-content: space-between; /* Distribute items with space between them */
-            padding: 15px 30px;
-            background-color: #fff; /* White */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        header img {
-            width: 70px;
-            height: auto;
-        }
-        header h1 {
-            color: #355E3B; /* Hunter green */
-            font-size: 24px;
-            margin: 0;
-            text-align: center;
-            flex-grow: 1; /* Allow h1 to take available space */
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #355E3B; /* Hunter green */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background-image: url('your-image-url.jpg'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2em;
-        }
-        .cta-button {
-            background-color: #FF5722; /* Orange */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1em;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .service-item {
-            background-color: #FBE106; /* Light yellow */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .form-container {
-            background-color: #fff; /* White background for the form */
-            border: 2px solid #ffcc00; /* Yellow border */
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 600px; /* Max width for better alignment */
-            margin: auto; /* Center the form */
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #e0e0e0; /* Light grey */
-            transition: border-color 0.3s;
-        }
-        input:focus, select:focus, textarea:focus {
-            border-color: #4F7942; /* Hunter green */
-        }
-        button {
-            background-color: #4F7942; /* Hunter green */
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #3a5d32; /* Darker green on hover */
-        }
-        footer {
-            background-color: #355E3B; /* Hunter green */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        @media (max-width: 768px) {
-            header {
-                flex-direction: row; /* Align items in a row */
-                justify-content: center; /* Center header content horizontally */
-            }
-            header img {
-                position: absolute;
-                left: 15px;
-            }
-            header h1 {
-                font-size: 20px; /* Adjust font size for smaller screens */
-                margin-left: auto;
-                margin-right: auto;
-            }
-            nav {
-                display: none; /* Hide navigation on smaller screens */
-            }
-            .cta-button {
-                font-size: 0.9em;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const slides = document.querySelectorAll('.slide');
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.remove('active');
-                    if (i === index) {
-                        slide.classList.add('active');
-                    }
-                });
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                showSlide(currentIndex);
-            }
-
-            showSlide(currentIndex);
-            setInterval(nextSlide, 2000); // Change image every 2 seconds
-        });
-    </script>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -353,6 +352,28 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
+            setInterval(nextSlide, 2000); // Change the image every 2 seconds
+        });
+
         document.getElementById('service').addEventListener('change', function() {
             var otherServiceInput = document.getElementById('otherService');
             otherServiceInput.style.display = this.value === 'Other' ? 'block' : 'none';
@@ -361,3 +382,4 @@
 
 </body>
 </html>
+
