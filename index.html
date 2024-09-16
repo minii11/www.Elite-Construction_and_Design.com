@@ -259,9 +259,33 @@ p {
     <div class="main-content" id="home">
         <h1>Welcome to Elite Construction & Design</h1>
         <p>Your Dream Home Starts Here - Crafting Luxury Living!</p>
-     <div class="image-container">
-            <img src="img 1.jpg" alt="Luxury Home Design">
-        </div>
+
+        <div class="container" style="position: relative; text-align: center;">
+    <img src="img 1.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
+    <div id="text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.5s ease; font-size: 2em;">
+    </div>
+</div>
+<script>
+    const words = ["Renovate", "Construct", "Deal", "Design", "Rent"];
+    let index = 0;
+    const textElement = document.getElementById('text');
+
+    function updateText() {
+        const currentWord = words[index];
+        textElement.innerHTML = `WE <span class="highlight" style="font-family: 'Belinda', serif; font-weight: bold; color: white;">${currentWord}</span> IN THE LOWCOUNTRY`;
+
+        // Fade in effect
+        textElement.style.opacity = 0; // Start with transparent
+        setTimeout(() => {
+            textElement.style.opacity = 1; // Fade in
+        }, 50); // Delay to allow transition
+
+        index = (index + 1) % words.length;
+    }
+
+    setInterval(updateText, 2000); // Change text every 2 seconds
+    updateText(); // Initial call
+</script>
 
 
 
