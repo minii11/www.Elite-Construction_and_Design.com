@@ -35,18 +35,37 @@
             z-index: 1000;
         }
 
+      header img {
+    width: 50px; /* Make the logo smaller */
+    height: auto;
+}
+        header {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* Center all header items */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
         header img {
-            width: 70px;
-            height: auto;
-        }
+    width: 50px; /* Smaller logo */
+    height: auto;
+    position: absolute; /* Position logo absolutely */
+    left: 15px; /* Adjust logo position */
+}
 
         header h1 {
-            color: #355E3B; /* Hunter green */
-            font-size: 24px;
-            margin: 0;
-            text-align: center;
-            flex-grow: 1; /* Allow h1 to take available space */
-        }
+    color: #355E3B;
+    font-size: 24px;
+    margin: 0;
+    text-align: center; /* Center text */
+    flex-grow: 1; /* Allow h1 to take available space */
+}
 
         nav {
             display: flex;
@@ -188,21 +207,19 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: row; /* Align items in a row */
-                justify-content: center; /* Center header content horizontally */
-            }
+    header {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center; /* Center all items */
+    }
 
-            header img {
-                position: absolute;
-                left: 15px;
-            }
+    header img {
+        width: 50px; /* Maintain smaller logo */
+    }
 
-            header h1 {
-                font-size: 20px; /* Adjust font size for smaller screens */
-                margin-left: auto;
-                margin-right: auto;
-            }
+    header h1 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+}
 
              h3 {
             font-family: 'Gentle Calligraphy', cursive; /* Apply Gentle Calligraphy font */
