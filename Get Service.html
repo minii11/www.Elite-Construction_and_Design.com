@@ -1,1 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Construction and Design</title>
+    <meta property="og:title" content="Elite Construction and Design">
+    <meta property="og:description" content="Discover the charm of Elite Home Designs, where your dream home becomes a reality!">
+    <meta property="og:image" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/image.jpg"> <!-- Update with the correct URL -->
+    <meta property="og:url" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/">
+    
+    <div class="image-slider">
+        <img src="image1.jpg" alt="Image 1" class="slide active">
+        <img src="image2.jpg" alt="Image 2" class="slide">
+        <img src="image3.jpg" alt="Image 3" class="slide">
+        <img src="image4.jpg" alt="Image 4" class="slide">
+       
+    </div>
+    
+    <style>
+        .image-slider {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+    
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+    
+        showSlide(currentIndex);
+        setInterval(nextSlide, 2000); // Change image every 2 seconds
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgrey; /* Light grey */
+            margin: 0;
+            color: #333; /* Dark grey text */
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px 30px;
+            background-color: #fff; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header img {
+            width: 70px;
+            height: auto;
+        }
+        header h1 {
+            color: #355E3B; /* Hunter green */
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1; /* Allow h1 to take available space */
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #355E3B; /* Hunter green */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-image: url('your-image-url.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .cta-button {
+            background-color: #FF5722; /* Orange */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: #FBE106; /* Light yellow */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            background-color: #fff; /* White background for the form */
+            border: 2px solid #ffcc00; /* Yellow border */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* Max width for better alignment */
+            margin: auto; /* Center the form */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e0e0e0; /* Light grey */
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #4F7942; /* Hunter green */
+        }
+        button {
+            background-color: #4F7942; /* Hunter green */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3a5d32; /* Darker green on hover */
+        }
+        footer {
+            background-color: #355E3B; /* Hunter green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row; /* Align items in a row */
+                justify-content: center; /* Center header content horizontally */
+            }
+            header img {
+                position: absolute;
+                left: 15px;
+            }
+            header h1 {
+                font-size: 20px; /* Adjust font size for smaller screens */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            nav {
+                display: none; /* Hide navigation on smaller screens */
+            }
+            .cta-button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Elite Construction">
+        <h1>Elite Construction and Design</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Build Your Dream Home with Us</h2>
+        <p>Your trusted partner in superior home construction.</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+        <h3>About Us</h3>
+        <br>
+        <p>At Elite Construction and Design, we don’t just build homes—we craft spaces that inspire and elevate your lifestyle. With a steadfast commitment to quality, innovation, and client satisfaction, we provide exceptional home construction solutions tailored to your unique vision.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="section">
+        <br>
+        <h3>Our Premier Services</h3>
+        <br>
+        <div class="services">
+            <div class="service-item">
+                <h4>Custom Home Construction</h4>
+                <p>Building your dream home is an exciting journey. We ensure every step is seamless and stress-free, creating bespoke homes that reflect your style and needs.</p>
+            </div>
+            <div class="service-item">
+                <h4>Renovations & Remodeling</h4>
+                <p>Transform your existing space with our premium renovation services. We enhance your home with designs that combine functionality and aesthetic beauty.</p>
+            </div>
+            <div class="service-item">
+                <h4>Architectural and Interior Design</h4>
+                <p>Our design experts bring your ideas to life, creating cohesive, sophisticated designs that integrate elegance with practicality.</p>
+            </div>
+            <div class="service-item">
+                <h4>Real Estate Development & Consulting</h4>
+                <p>Receive expert advice on property development and real estate investment. We provide tailored strategies that align with your vision and goals.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Why Choose Us Section -->
+    <div class="section">
+        <h3>Why Choose Elite Construction and Design?</h3>
+        <br>
+        <p>We hold ourselves to the highest standards of quality, ensuring every project is executed with meticulous attention to detail. Your vision is at the heart of everything we do, and our experienced professionals collaborate closely with you throughout the entire process.</p>
+    </div>
+
+    <!-- Our Process Section -->
+    <div class="section">
+        <h3>Our Process: How We Work</h3>
+        <br>
+        <p>1. <strong>Initial Consultation:</strong> We start by understanding your vision and preferences.</p>
+        <p>2. <strong>Planning and Design:</strong> Our design team creates detailed plans tailored to your needs.</p>
+        <p>3. <strong>Execution:</strong> Our construction team uses the latest techniques and materials to bring your vision to life.</p>
+        <p>4. <strong>Final Review and Handover:</strong> We conduct a comprehensive final review to ensure everything meets your expectations.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h3>Contact Us Today</h3>
+
+        <br>
+        <p>Please fill out the form below to get started. One of our expert team members will reach out to discuss your project and guide you through the next steps.</p>
+        <div class="form-container">
+            <form id="contactForm" action="mailto:hamayounsalman3237@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Property Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="service">Type of Service Needed:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select an option</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Renovation">Renovation</option>
+                    <option value="Designing">Designing</option>
+                    <option value="Rentals">Rentals</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="otherService">If Other, please specify:</label>
+                <input type="text" id="otherService" name="otherService" style="display:none;">
+
+                <label for="budget">Budget Range:</label>
+                <input type="text" id="budget" name="budget" required>
+
+                <label for="timeline">Timeline for the Project:</label>
+                <input type="text" id="timeline" name="timeline" required>
+
+                <label for="requirements">Specific Requirements or Preferences:</label>
+                <textarea id="requirements" name="requirements" rows="4"></textarea>
+
+                <label for="comments">Any Additional Comments or Questions:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2024 Elite Construction and Design. All rights reserved.</p>
+        <p>Contact:<a href="https://wa.me/923223237533">Chat on WhatsApp</a></p> 
+       <br>
+        <a href="index.html" style="background-color: #ff4500; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 1em;">Home</a>
+   
+    </footer>
+
+    <script>
+        document.getElementById('service').addEventListener('change', function() {
+            var otherServiceInput = document.getElementById('otherService');
+            otherServiceInput.style.display = this.value === 'Other' ? 'block' : 'none';
+        });
+    </script>
+
+</body>
+</html>
