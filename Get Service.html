@@ -9,25 +9,18 @@
     <meta property="og:image" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/image.jpg"> <!-- Update with the correct URL -->
     <meta property="og:url" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/">
     
-    <div class="image-slider">
-        <img src="image1.jpg" alt="Image 1" class="slide active">
-        <img src="image2.jpg" alt="Image 2" class="slide">
-        <img src="image3.jpg" alt="Image 3" class="slide">
-        <img src="image4.jpg" alt="Image 4" class="slide">
-       
-    </div>
-    
     <style>
         .image-slider {
             position: relative;
             width: 100%;
-            height: 300px; /* Adjust height as needed */
+            height: calc(100vh - 56px); /* Fill the screen height minus the header height */
             overflow: hidden;
         }
         .slide {
             position: absolute;
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire area */
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -35,28 +28,26 @@
             opacity: 1;
         }
     </style>
-    
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0;
-    
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-    
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        }
-    
-        showSlide(currentIndex);
-        setInterval(nextSlide, 2000); // Change image every 2 seconds
-    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Elite Construction">
+        <h1>Elite Construction and Design</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="image-slider">
+        <img src="image1.jpg" alt="Image 1" class="slide active">
+        <img src="image2.jpg" alt="Image 2" class="slide">
+        <img src="image3.jpg" alt="Image 3" class="slide">
+        <img src="image4.jpg" alt="Image 4" class="slide">
+    </div>
     
     <style>
         * {
@@ -220,19 +211,30 @@
             }
         }
     </style>
-</head>
-<body>
 
-    <!-- Header -->
-    <header>
-        <img src="logo.png" alt="Elite Construction">
-        <h1>Elite Construction and Design</h1>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
+            setInterval(nextSlide, 2000); // Change image every 2 seconds
+        });
+    </script>
 
     <!-- Hero Section -->
     <div class="hero">
