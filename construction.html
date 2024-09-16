@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gentle+Calligraphy&display=swap" rel="stylesheet"> <!-- Include the font -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4; /* Light grey */
+            font-size: 14px; /* Set the desired font size */
         }
         header {
             background-color: #8B4513; /* Brown */
@@ -18,9 +20,9 @@
             text-align: center;
         }
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 1.6em; /* Adjust this to your preference */
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
@@ -35,29 +37,29 @@
         }
         .section-title {
             color: #DAA520; /* Yellow */
-            font-size: 2em;
+            font-size: 1.4em; /* Adjusted size to be relative to body */
             margin-bottom: 10px;
             border-bottom: 2px solid #DAA520;
             padding-bottom: 5px;
+            font-family: 'Gentle Calligraphy', cursive;
         }
         .content {
             color: #333;
             line-height: 1.6;
         }
-        .images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .image-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
             margin: 20px 0;
         }
-        .images img {
-            width: 48%;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            transition: transform 0.3s;
+        .image-carousel img {
+            width: 100%;
+            display: none; /* Hide images by default */
         }
-        .images img:hover {
-            transform: scale(1.05);
+        .image-carousel img.active {
+            display: block; /* Show only the active image */
         }
         footer {
             background-color: #4CAF50; /* Green */
@@ -95,6 +97,14 @@
 <div class="container">
     <img src="img c0.jpg" alt="Image c0" style="width: 100%;">
 
+    <!-- Image Carousel -->
+    <div class="image-carousel">
+        <img src="img_c1.jpg" alt="Construction Image 1" class="active"> <!-- Replace with actual image path -->
+        <img src="img_c2.jpg" alt="Construction Image 2"> <!-- Replace with actual image path -->
+        <img src="img_c3.jpg" alt="Construction Image 3"> <!-- Replace with actual image path -->
+        <img src="img_c4.jpg" alt="Construction Image 4"> <!-- Replace with actual image path -->
+        <img src="img_c5.jpg" alt="Construction Image 5"> <!-- Replace with actual image path -->
+    </div>
 
     <section class="section">
         <div class="section-title">Why Choose Us?</div>
@@ -150,8 +160,8 @@
         <p>Contact us today to bring your dream home to life!</p>
     </div>
 
+    <!-- Existing images section -->
     <section class="images">
-      
         <img src="img c1.jpg" alt="Construction Image 1">
         <img src="img c2.jpg" alt="Construction Image 2">
         <img src="img c3.jpg" alt="Construction Image 3">
@@ -161,12 +171,25 @@
         <img src="img c7.jpg" alt="Construction Image 7">
         <img src="img c8.jpg" alt="Construction Image 8">
     </section>
-
 </div>
 
 <footer>
     <p>&copy; 2024 [Elite Construction and Design]. All rights reserved.</p>
 </footer>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.image-carousel img');
+    const totalImages = images.length;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 2000); // Change image every 2 seconds
+</script>
 
 </body>
 </html>
