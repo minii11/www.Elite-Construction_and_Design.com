@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://minii11.github.io/www.Elite-Construction_and_Design.com/">
     
     <style>
-        * {
+              * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -18,55 +18,93 @@
         }
 
         body {
+            background-color: #f9f9f9;
             font-family: Arial, sans-serif;
-            background-color: lightgrey; /* Light grey */
-            color: #333; /* Dark grey text */
+            margin: 0;
+            padding: 20px;
         }
 
         header {
             display: flex;
             align-items: center; /* Center items vertically */
             justify-content: space-between; /* Distribute items with space between them */
-            padding: 15px 30px;
-            background-color: #fff; /* White */
+            padding: 15px;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 100%;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
             z-index: 1000;
         }
 
-      header img {
-    width: 50px; /* Make the logo smaller */
-    height: auto;
-}
-        header {
-    display: flex;
-    align-items: center; 
-    justify-content: center; /* Center all header items */
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
         header img {
-    width: 50px; /* Smaller logo */
-    height: auto;
-    position: absolute; /* Position logo absolutely */
-    left: 15px; /* Adjust logo position */
-}
+            width: 70px;
+            height: auto;
+        }
 
         header h1 {
-    color: #355E3B;
-    font-size: 24px;
-    margin: 0;
-    text-align: center; /* Center text */
-    flex-grow: 1; /* Allow h1 to take available space */
-}
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
 
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: brown;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+
+
+   
         nav {
             display: flex;
             align-items: center;
@@ -236,7 +274,7 @@
             .cta-button {
                 font-size: 0.9em;
             }
-        }
+        
     </style>
 </head>
 <body>
@@ -250,6 +288,19 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
+        <header>
+            <img src="image.jpg" alt="Elite Construction">
+            <h1>Elite Construction</h1>
+            <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        </header>
+    
+        <div class="sidebar" id="sidebar">
+            <a href="index.html">Home</a>
+            <a href="Get Service.html">Get Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="Our Works">Our Works</a>
+            <a href="about.html">About</a>
+        </div>
     </header>
 
     <!-- Image Slider -->
@@ -409,6 +460,15 @@
             var otherServiceInput = document.getElementById('otherService');
             otherServiceInput.style.display = this.value === 'Other' ? 'block' : 'none';
         });
+
+        function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar.style.display === 'block') {
+            sidebar.style.display = 'none';
+        } else {
+            sidebar.style.display = 'block';
+        }
+    }
     </script>
 
 </body>
