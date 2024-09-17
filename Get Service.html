@@ -381,7 +381,8 @@
        <br>
         <br>
         <div class="form-container">
-            <form id="contactForm" action="mailto:eliteconstruction3237@gmail.com" method="POST" enctype="text/plain">
+          <form id="contactForm" action="mailto:eliteconstruction3237@gmail.com?subject=Consultation" method="POST" enctype="text/plain" onsubmit="redirectAfterSubmit()">
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -468,6 +469,17 @@
         } else {
             sidebar.style.display = 'block';
         }
+    }
+          function redirectAfterSubmit() {
+        setTimeout(function() {
+            // Redirect the user back to the page with a URL parameter to show the alert
+            window.location.href = window.location.href.split('?')[0] + "?submitted=true";
+        }, 500); // Delay for email client to open
+    }
+
+    // Check if the URL contains the "submitted" parameter
+    if (window.location.search.includes('submitted=true')) {
+        alert('Thanks! For your consultation. We will check your requirements and our team will respond to you shortly with the best plan. You can also contact us on WhatsApp for more assistance :)');
     }
     </script>
 
