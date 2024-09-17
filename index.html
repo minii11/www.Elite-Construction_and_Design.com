@@ -599,17 +599,17 @@ p {
             }
         }
 
-          function showSubmitAlert(event) {
-        event.preventDefault(); // Prevent form submission for now
+          document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting immediately
         
-        // Show alert when form is first submitted
+        // Show alert message
         alert('Thanks! For your consultation. We will check your requirements and our team will respond to you shortly with the best plan. You can also contact us on WhatsApp for more assistance :)');
         
-        // Submit the form after alert is shown
-        setTimeout(function() {
-            document.getElementById('contactForm').submit();
-        }, 500); // Delay for half a second to show the alert
-    }
+        // Submit the form after the alert
+        setTimeout(() => {
+            this.submit(); // Submit the form
+        }, 500); // Delay submission to allow alert message to show first
+    });
     </script>
 
 </body>
