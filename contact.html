@@ -162,6 +162,23 @@
                 font-size: 18px; /* Further reduce header font size for very small screens */
             }
         }
+         .sticker {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        word-wrap: break-word;
+    }
+
+    .sticker svg {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+    }
     </style>
 </head>
 <body>
@@ -194,40 +211,32 @@
      <img src="./img card1.jpg" alt="">
 
         <img src="./img card2.jpg" alt="">
-        
         <!-- Email Sticker -->
 <br>
 <div class="sticker">
     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path class="dark-purple" d="M12 13.5l-11-7V5l11 7 11-7v1.5l-11 7zM0 9l12 8 12-8V19H0V9z"/>
     </svg>
-    <span style="font-size: 14px;">Email: <strong>eliteconstruction3237@gmail.com</strong></span>
+    <span class="sticker-text">Email: <strong>eliteconstruction3237@gmail.com</strong></span>
 </div>
 
-        
+<!-- Contact Sticker -->
+<div class="sticker">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path class="dark-purple" d="M6.62 10.79c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zm11.09-5.18c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zM12 2C7.06 2 3 6.06 3 11c0 3.87 3.13 7 7 7 1.48 0 2.86-.48 4-1.29L21 22l1-1-6.29-6.29C16.52 13.86 17 12.48 17 11c0-4.94-4.06-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.48-.48 2.86-1.29 4L12 13.59V10h-2V8h2V6h-2V4h2z"/>
+    </svg>
+    <span class="sticker-text">Contact: <strong>+923418448889, +923223237533</strong></span>
+</div>
+
+<!-- Location Sticker -->
+<div class="sticker">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path class="dark-purple" d="M12 2C8.1 2 5 5.1 5 9c0 2.9 4 7 7 11 3-4 7-8.1 7-11 0-3.9-3.1-7-7-7zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+    </svg>
+    <span class="sticker-text">Location: <strong>Design House 17D 3rd floor commercial Area DHA EME Phase 12 Lahore, Punjab, Pakistan</strong></span>
+</div>
+
        
-
-        <!-- Contact Sticker -->
-        <div class="sticker">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path class="dark-purple" d="M6.62 10.79c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zm11.09-5.18c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zM12 2C7.06 2 3 6.06 3 11c0 3.87 3.13 7 7 7 1.48 0 2.86-.48 4-1.29L21 22l1-1-6.29-6.29C16.52 13.86 17 12.48 17 11c0-4.94-4.06-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.48-.48 2.86-1.29 4L12 13.59V10h-2V8h2V6h-2V4h2z"/>
-            </svg>
-            <span>Contact: <strong>+923418448889,+923223237533</strong></span>
-        </div>
-
-
-
-
-        
-        <!-- Location Sticker -->
-        <div class="sticker">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path class="dark-purple" d="M12 2C8.1 2 5 5.1 5 9c0 2.9 4 7 7 11 3-4 7-8.1 7-11 0-3.9-3.1-7-7-7zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-            </svg>
-            <span>Location: <strong>Design House 17D 3rd floor commercial Area DHA EME Phase 12 Lahore, Punjab, Pakistan</strong></span>
-        </div>
-    </div>
-
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
