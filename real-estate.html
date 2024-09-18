@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Construction and Design</title>
+    <style>
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: brown;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+
+        body {
+            font-family: 'Gentle Calligraphy', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light Gray */
+            color: #444;
+            line-height: 1.6;
+        }
+      
+        h1 {
+            font-size: 2.8em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #e6e7e8; /* Light Gray */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #3B8B3A; /* Hunter Green */
+            margin-bottom: 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #D6C94B; /* Medium Yellow */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; /* Indicate that the card is clickable */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .hidden-images {
+            display: none;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+        .visible-image {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 70px; /* Adjust size as needed */
+            opacity: 1;
+        }
+        footer {
+            background-color: #8B5A2B; /* Brown */
+            color: #f5f5f5; /* Light Gray */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #3B8B3A; /* Hunter Green */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #D6C94B; /* Medium Yellow */
+        }
+        #slideshow {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        #slideshow img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        #slideshow img.active {
+            opacity: 1;
+        }
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .card {
+        background-color: #D6C94B; /* Medium Yellow */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="image.jpg" alt="Elite Construction">
+        <h1>Elite Construction</h1>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Get Service.html">Get Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="Our Works">Our Works</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <br>
+    <br>
+
+<div id="slideshow">
+    <img src="imagep1.jpg" class="active" alt="Project Image 1">
+    <img src="imagep2.jpg" alt="Project Image 2">
+    <img src="imagep3.jpg" alt="Project Image 3">
+    <img src="imagep4.jpg" alt="Project Image 4">
+    <img src="imagep5.jpg" alt="Project Image 5">
+    <img src="imagep6.jpg" alt="Project Image 6">
+</div>
+
+    <h2 style="font-family: 'Arial', sans-serif; color: #3B8B3A; text-align: center; font-size: 2.5em; margin-bottom: 20px;">Real Estate: Your Perfect Home Awaits</h2>
+    <p style="font-family: 'Georgia', serif; color: #444; line-height: 1.6; text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+        At Elite Construction and Design, we take pride in connecting you with stunning homes tailored to your unique preferences. Whether you envision a quaint cottage brimming with charm, a spacious family residence designed for modern living, or an opulent villa with breathtaking views, we are dedicated to making your dreams a reality.
+    </p>
+    
+    <p style="font-family: 'Georgia', serif; color: #444; line-height: 1.6; text-align: center; max-width: 800px; margin: 20px auto; font-size: 1.1em;">
+        Our expert team works closely with you to understand your desires and needs, ensuring we present homes that align perfectly with your vision. With a diverse portfolio of properties, we guide you through every step of the home-buying journey, making the experience seamless and enjoyable.
+    </p>
+    
+    <p style="font-family: 'Georgia', serif; color: #444; line-height: 1.6; text-align: center; max-width: 800px; margin: 20px auto; font-size: 1.1em;">
+        Explore our collection of beautiful homes and let us help you discover a place where you can truly feel at home!
+    </p>
+</section>
+
+<section>
+
+    
+    <h2>Our Projects</h2>
+    <p>Click Below and Take a look at some of our recent projects showcasing our expertise:</p>
+    <div class="grid">
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Modern Family Home</h3>
+            <p>A beautiful custom-built home designed for modern living.</p>
+            <img src="project1-1.jpg" class="visible-image" alt="Visible Project 1 Image">
+            <div class="hidden-images">
+                <img src="project1-2.jpg" alt="Project 1 Image 2">
+                <img src="project1-3.jpg" alt="Project 1 Image 3">
+                <img src="project1-4.jpg" alt="Project 1 Image 4">
+                <img src="project1-5.jpg" alt="Project 1 Image 5">
+                <img src="project1-6.jpg" alt="Project 1 Image 6">
+            </div>
+        </div>
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Luxury Kitchen Renovation</h3>
+            <p>A stunning kitchen remodel combining functionality with style.</p>
+            <img src="project2-1.jpg" class="visible-image" alt="Visible Project 2 Image">
+            <div class="hidden-images">
+                <img src="project2-2.jpg" alt="Project 2 Image 2">
+                <img src="project2-3.jpg" alt="Project 2 Image 3">
+                <img src="project2-4.jpg" alt="Project 2 Image 4">
+                <img src="project2-5.jpg" alt="Project 2 Image 5">
+                <img src="project2-6.jpg" alt="Project 2 Image 6">
+            </div>
+        </div>
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Commercial Property Management</h3>
+            <p>Expert management of a multi-tenant commercial property.</p>
+            <img src="project3-1.jpg" class="visible-image" alt="Visible Project 3 Image">
+            <div class="hidden-images">
+                <img src="project3-2.jpg" alt="Project 3 Image 2">
+                <img src="project3-3.jpg" alt="Project 3 Image 3">
+                <img src="project3-4.jpg" alt="Project 3 Image 4">
+                <img src="project3-5.jpg" alt="Project 3 Image 5">
+                <img src="project3-6.jpg" alt="Project 3 Image 6">
+            </div>
+        </div>
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Eco-Friendly Office Space</h3>
+            <p>Designing sustainable workspaces that enhance productivity.</p>
+            <img src="project4-1.jpg" class="visible-image" alt="Visible Project 4 Image">
+            <div class="hidden-images">
+                <img src="project4-2.jpg" alt="Project 4 Image 2">
+                <img src="project4-3.jpg" alt="Project 4 Image 3">
+                <img src="project4-4.jpg" alt="Project 4 Image 4">
+                <img src="project4-5.jpg" alt="Project 4 Image 5">
+                <img src="project4-6.jpg" alt="Project 4 Image 6">
+            </div>
+        </div>
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Luxury Apartment Complex</h3>
+            <p>Building high-end living spaces with modern amenities.</p>
+            <img src="project5-1.jpg" class="visible-image" alt="Visible Project 5 Image">
+            <div class="hidden-images">
+                <img src="project5-2.jpg" alt="Project 5 Image 2">
+                <img src="project5-3.jpg" alt="Project 5 Image 3">
+                <img src="project5-4.jpg" alt="Project 5 Image 4">
+                <img src="project5-5.jpg" alt="Project 5 Image 5">
+                <img src="project5-6.jpg" alt="Project 5 Image 6">
+            </div>
+        </div>
+        <div class="card" onclick="toggleImages(this)">
+            <h3>Renovation of Historical Building</h3>
+            <p>Restoring and preserving the charm of historical architecture.</p>
+            <img src="project6-1.jpg" class="visible-image" alt="Visible Project 6 Image">
+            <div class="hidden-images">
+                <img src="project6-2.jpg" alt="Project 6 Image 2">
+                <img src="project6-3.jpg" alt="Project 6 Image 3">
+                <img src="project6-4.jpg" alt="Project 6 Image 4">
+                <img src="project6-5.jpg" alt="Project 6 Image 5">
+                <img src="project6-6.jpg" alt="Project 6 Image 6">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+
+    
+    <h2>Our Real Estate Services</h2>
+    <p>At Elite Construction and Design, we provide a wide range of real estate services to meet your needs:</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Home Building</h3>
+            <p>We specialize in building custom homes tailored to your specifications. From design to construction, we ensure quality and attention to detail at every step.</p>
+        </div>
+        <div class="card">
+            <h3>Renovations and Remodeling</h3>
+            <p>Our renovation services enhance your space's functionality and aesthetics, whether you're updating a kitchen or expanding your living area.</p>
+        </div>
+        <div class="card">
+            <h3>Property Management</h3>
+            <p>We offer professional property management services, ensuring your investment is well-maintained and your tenants are satisfied.</p>
+        </div>
+        <div class="card">
+            <h3>Real Estate Rentals</h3>
+            <p>We assist clients in finding the perfect rental properties. Our extensive listings cater to various budgets and preferences.</p>
+        </div>
+        <div class="card">
+            <h3>Market Analysis</h3>
+            <p>Stay informed with our comprehensive market analysis, helping you make educated decisions whether buying, selling, or renting.</p>
+        </div>
+        <div class="card">
+            <h3>Client Consultation</h3>
+            <p>Our experts provide personalized consultations to understand your needs and guide you through your real estate journey.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Our Process</h2>
+    <p>At Elite Construction and Design, we follow a streamlined process to ensure a seamless experience for our clients:</p>
+    <ol>
+        <li><strong>Initial Consultation:</strong> We meet with you to discuss your needs, preferences, and budget.</li>
+        <li><strong>Property Search:</strong> Our team searches for properties that match your criteria, whether for purchase or rent.</li>
+        <li><strong>Property Viewing:</strong> We arrange viewings to help you assess potential homes or investments.</li>
+        <li><strong>Negotiation:</strong> Our skilled negotiators work to get you the best deal possible.</li>
+        <li><strong>Documentation:</strong> We assist with all necessary paperwork to ensure a smooth transaction.</li>
+        <li><strong>Post-Sale Support:</strong> Our commitment to you continues even after the sale, offering ongoing support and property management services as needed.</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Client Reviews</h2>
+    <p>Don't just take our word for it—here's what our satisfied clients have to say:</p>
+    <div class="testimonial">
+        <p>"Elite Construction and Design transformed our dream home into a reality! Their attention to detail and commitment to quality are unparalleled." — Sarah K.</p>
+    </div>
+    <div class="testimonial">
+        <p>"The property management services provided by Elite have been exceptional. They handle everything with professionalism and care." — John D.</p>
+    </div>
+    <div class="testimonial">
+        <p>"I was impressed by their knowledge of the market. They helped me find the perfect rental property in no time!" — Emily R.</p>
+    </div>
+    <div class="testimonial">
+        <p>"The renovation of my kitchen was seamless and stress-free. I couldn't be happier with the results!" — Mike T.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose Us?</h2>
+    <p>At Elite Construction and Design, we prioritize your needs and satisfaction. Here are just a few reasons to choose us:</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Experienced Professionals</h3>
+            <p>Our team consists of skilled architects, builders, and real estate experts dedicated to delivering top-notch services.</p>
+        </div>
+        <div class="card">
+            <h3>Quality Assurance</h3>
+            <p>We adhere to the highest standards of quality in every project, ensuring lasting value and satisfaction.</p>
+        </div>
+        <div class="card">
+            <h3>Transparent Communication</h3>
+            <p>We keep you informed at every stage of the process, ensuring a transparent and stress-free experience.</p>
+        </div>
+        <div class="card">
+            <h3>Comprehensive Support</h3>
+            <p>From initial consultation to post-sale support, we are here to assist you every step of the way.</p>
+        </div>
+        <div class="card">
+            <h3>Community Commitment</h3>
+            <p>We believe in giving back and actively participate in community initiatives, supporting local causes and charities.</p>
+        </div>
+    </div>
+</section>
+<section>
+
+</section>
+ 
+
+<section>
+    <h2>Our Process</h2>
+    <p>At Elite Construction and Design, we follow a streamlined process to ensure a seamless experience for our clients:</p>
+    <ol>
+        <li><strong>Initial Consultation:</strong> We meet with you to discuss your needs, preferences, and budget.</li>
+        <li><strong>Property Search:</strong> Our team searches for properties that match your criteria, whether for purchase or rent.</li>
+        <li><strong>Property Viewing:</strong> We arrange viewings to help you assess potential homes or investments.</li>
+        <li><strong>Negotiation:</strong> Our skilled negotiators work to get you the best deal possible.</li>
+        <li><strong>Documentation:</strong> We assist with all necessary paperwork to ensure a smooth transaction.</li>
+        <li><strong>Post-Sale Support:</strong> Our commitment to you continues even after the sale, offering ongoing support and property management services as needed.</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Client Reviews</h2>
+    <p>Don't just take our word for it—here's what our satisfied clients have to say:</p>
+    <div class="testimonial">
+        <p>"Elite Construction and Design transformed our dream home into a reality! Their attention to detail and commitment to quality are unparalleled." — Sarah K.</p>
+    </div>
+    <div class="testimonial">
+        <p>"The property management services provided by Elite have been exceptional. They handle everything with professionalism and care." — John D.</p>
+    </div>
+    <div class="testimonial">
+        <p>"I was impressed by their knowledge of the market. They helped me find the perfect rental property in no time!" — Emily R.</p>
+    </div>
+    <div class="testimonial">
+        <p>"The renovation of my kitchen was seamless and stress-free. I couldn't be happier with the results!" — Mike T.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose Us?</h2>
+    <p>At Elite Construction and Design, we prioritize your needs and satisfaction. Here are just a few reasons to choose us:</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Experienced Professionals</h3>
+            <p>Our team consists of skilled architects, builders, and real estate experts dedicated to delivering top-notch services.</p>
+        </div>
+        <div class="card">
+            <h3>Quality Assurance</h3>
+            <p>We adhere to the highest standards of quality in every project, ensuring lasting value and satisfaction.</p>
+        </div>
+        <div class="card">
+            <h3>Transparent Communication</h3>
+            <p>We keep you informed at every stage of the process, ensuring a transparent and stress-free experience.</p>
+        </div>
+        <div class="card">
+            <h3>Comprehensive Support</h3>
+            <p>From initial consultation to post-sale support, we are here to assist you every step of the way.</p>
+        </div>
+        <div class="card">
+            <h3>Community Commitment</h3>
+            <p>We believe in giving back and actively participate in community initiatives, supporting local causes and charities.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <p>Ready to start your project or find your dream home? Get in touch with us today!</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>Email: <a href="mailto:info@eliteconstructiondesign.com">info@eliteconstructiondesign.com</a></p>
+    <p>Address: 123 Main Street, Your City, State, Zip</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Elite Construction and Design. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const images = document.querySelectorAll('#slideshow img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 2000);
+
+    function toggleImages(card) {
+        const hiddenImages = card.querySelector('.hidden-images');
+        if (hiddenImages.style.display === 'block') {
+            hiddenImages.style.display = 'none';
+        } else {
+            hiddenImages.style.display = 'block';
+        }
+    }
+    function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
+
+</script>
+
+</body>
+</html>
