@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Construction and Design</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: brown;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #3C6E47; /* Hunter Green */
+            margin: 0;
+            padding: 0;
+        }
+         h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            color: #FFC700; /* Cadmium Yellow */
+            text-align: center;
+        }
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .content {
+            padding: 20px;
+            background-color: #fff; /* White for content background */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .grid-item {
+            flex: 1 1 280px; /* Responsive item size */
+            background-color: #d1ffbd; /* Light grey for grid items */
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+           /* Flexbox Section */
+           .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background-color:#d1ffbd ;
+        }
+        .flex-item {
+            background-color: #f9e076;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            flex: 1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #3C6E47; /* Hunter Green */
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #FFC700; /* Cadmium Yellow */
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .card {
+            background-color: #E8E9EB; /* White for card background */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            background-color: #e0e0e0; /* Grey button */
+            color: orangered; /* Red text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #d9d9d9; /* Darker grey on hover */
+        }
+        .image-container {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        /* Grid Layout */
+        .grid-item {
+            padding: 20px;
+            border: 1px solid orangered;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #8B5A2B; /* Brown */
+            color: #f5f5f5; /* Light Gray */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image.jpg" alt="Elite Construction">
+        <h1>Elite Construction</h1>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Get Service.html">Get Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="Our Works">Our Works</a>
+        <a href="about.html">About</a>
+    </div>
+
+<section class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+4" alt="Image 4">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+5" alt="Image 5">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+6" alt="Image 6">
+    </div>
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+7" alt="Image 7">
+    </div>
+</section>
+
+<div class="content">
+    <h2>Residential Renovation Services</h2>
+    <br>
+    <div class="grid">
+        <div class="grid-item">🏡 **Transform Your Home:** Elite Construction creates magazine-worthy masterpieces.</div>
+        <div class="grid-item">✨ **Luxury Redefined:** Enjoy luxurious kitchen makeovers and cozy bedroom retreats.</div>
+        <div class="grid-item">🛁 **Spa-Like Comfort:** Indulge in spa-like bathrooms and exquisite new floors.</div>
+        <div class="grid-item">🌿 **Modern Exteriors:** Revamp your home's exterior with stunning upgrades and waterproofing.</div>
+    </div>
+    <br>
+
+    <h2>Commercial Renovation Expertise</h2>
+    <br>
+    <div class="grid">
+        <div class="grid-item">🏢 **Vision to Reality:** Your partner for transforming commercial spaces.</div>
+        <div class="grid-item">🔨 **Expert Demolitions:** Out with the old, in with cutting-edge constructions.</div>
+        <div class="grid-item">📍 **Strategic Locations:** Tailored services for property selling or development.</div>
+        <div class="grid-item">💼 **Bespoke Solutions:** New builds or revitalization projects tailored to your business.</div>
+    </div>
+<br>
+<br>
+    <h2 style="font-family: 'Dancing Script', cursive; color: #FFC700;">What Makes Us Elite?</h2>
+    <br>
+    <p style="font-family: 'Arial', sans-serif; color: #3C6E47; line-height: 1.6;">
+        🌟 <strong>Innovative Solutions:</strong> We pride ourselves on creativity and innovation. Our team stays ahead of the curve, utilizing the latest trends and technologies to provide you with cutting-edge designs that are both functional and stylish.
+    </p>
+    <p style="font-family: 'Arial', sans-serif; color: #3C6E47; line-height: 1.6;">
+        🏆 <strong>Award-Winning Team:</strong> Recognized for excellence in design and craftsmanship, our award-winning team brings a wealth of knowledge and experience to every project.
+    </p>
+    <p style="font-family: 'Arial', sans-serif; color: #3C6E47; line-height: 1.6;">
+        🗝️ <strong>Comprehensive Services:</strong> From concept to completion, we offer a full suite of renovation services.
+    </p>
+<br>
+
+<h2 style="font-family: 'Dancing Script', cursive; color: #FFC700;">Our Unique Approach</h2>
+<br>
+<ol style="font-family: 'Arial', sans-serif; color: #3C6E47; line-height: 1.6;">
+    <li><strong>Inspiration Workshop:</strong> Kickstart your renovation journey with our interactive session.</li>
+    <li><strong>Tailored Design Experience:</strong> Collaborate with our talented designers for detailed plans and 3D renderings.</li>
+    <li><strong>Transparent Communication:</strong> Keep informed every step of the way with regular updates.</li>
+    <li><strong>Post-Renovation Support:</strong> We offer ongoing support to ensure your satisfaction.</li>
+</ol>
+</div>
+
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Dancing+Script&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+</div>
+</div>
+<br>
+
+<h2><strong>Residential Renovation Services</strong></h2>
+<div class="container">
+    <div class="card">
+        <h3>Kitchen Renovations</h3>
+        <p>"Transform your kitchen into a culinary masterpiece with our innovative designs and premium materials. From custom cabinetry to state-of-the-art appliances, we elevate your cooking space to new heights of functionality and style."</p>
+        <button class="button" onclick="toggleImages('kitchenImages')">View Kitchen Images</button>
+        <div id="kitchenImages" class="image-container">
+            <img src="img k1.jpg" alt="Kitchen Image 1">
+            <img src="img k2.jpg" alt="Kitchen Image 2">
+            <img src="img k3.jpg" alt="Kitchen Image 3">
+            <img src="img k4.jpg" alt="Kitchen Image 4">
+            <img src="img k5.jpg" alt="Kitchen Image 5">
+            <img src="img k6.jpg" alt="Kitchen Image 6">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Bedroom Enhancements</h3>
+        <p>"Experience the ultimate relaxation in a revamped bedroom oasis. Our expertise in creating cozy retreats includes luxurious bedding, bespoke furniture, and soothing color palettes, tailored to your personal taste for a restful night's sleep."</p>
+        <button class="button" onclick="toggleImages('bedroomImages')">View Bedroom Images</button>
+        <div id="bedroomImages" class="image-container">
+            <img src="img b1.jpg" alt="Bedroom Image 1">
+            <img src="img b2.jpg" alt="Bedroom Image 2">
+            <img src="img b3.jpg" alt="Bedroom Image 3">
+            <img src="img b4.jpg" alt="Bedroom Image 4">
+            <img src="img b5.jpg" alt="Bedroom Image 5">
+            <img src="img b6.jpg" alt="Bedroom Image 6">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Bathroom Upgrades</h3>
+        <p>"Elevate your daily routine with our bathroom upgrades. From elegant fixtures to spa-like showers, we combine functionality with luxury to create a serene escape within your home."</p>
+        <button class="button" onclick="toggleImages('bathroomImages')">View Bathroom Images</button>
+        <div id="bathroomImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Bathroom+1" alt="Bathroom Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Bathroom+2" alt="Bathroom Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Bathroom+3" alt="Bathroom Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Flooring Solutions</h3>
+        <p>"Step onto quality and style with our flooring solutions. Whether it's hardwood, tile, or carpet, we offer a wide range of options to enhance your space with durability and timeless elegance."</p>
+        <button class="button" onclick="toggleImages('flooringImages')">View Flooring Images</button>
+        <div id="flooringImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Flooring+1" alt="Flooring Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Flooring+2" alt="Flooring Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Flooring+3" alt="Flooring Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Termite-Proofing</h3>
+        <p>"Protect your home from unwanted guests with our termite-proofing solutions. Our expert techniques and materials ensure a secure environment, giving you peace of mind for years to come."</p>
+        <button class="button" onclick="toggleImages('termiteImages')">View Termite-Proofing Images</button>
+        <div id="termiteImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Termite+1" alt="Termite-Proofing Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Termite+2" alt="Termite-Proofing Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Termite+3" alt="Termite-Proofing Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Waterproofing</h3>
+        <p>"Shield your home from moisture damage with our waterproofing expertise. From foundations to roofs, we provide comprehensive solutions to keep your space dry and safe in any weather."</p>
+        <button class="button" onclick="toggleImages('waterproofingImages')">View Waterproofing Images</button>
+        <div id="waterproofingImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Waterproofing+1" alt="Waterproofing Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Waterproofing+2" alt="Waterproofing Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Waterproofing+3" alt="Waterproofing Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Tile Replacements</h3>
+        <p>"Refresh your space with our tile replacement services. From modern patterns to classic designs, we offer a variety of tiles to revitalize your floors, walls, and backsplashes with quality craftsmanship."</p>
+        <button class="button" onclick="toggleImages('tileImages')">View Tile Images</button>
+        <div id="tileImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Tile+1" alt="Tile Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Tile+2" alt="Tile Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Tile+3" alt="Tile Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Modernizing External Facades</h3>
+        <p>"Enhance your home's curb appeal with our external facades. Our contemporary designs and durable materials give your property a fresh, modern look that stands out in the neighborhood."</p>
+        <button class="button" onclick="toggleImages('facadeImages')">View Facade Images</button>
+        <div id="facadeImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Facade+1" alt="Facade Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Facade+2" alt="Facade Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Facade+3" alt="Facade Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Home Sewage Systems</h3>
+        <p>"Ensure efficient and reliable waste management with our home sewage systems. From installation to maintenance, we provide solutions that keep your property clean and environmentally friendly."</p>
+        <button class="button" onclick="toggleImages('sewageImages')">View Sewage Images</button>
+        <div id="sewageImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Sewage+1" alt="Sewage Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Sewage+2" alt="Sewage Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Sewage+3" alt="Sewage Image 3">
+        </div>
+    </div>
+</div>
+
+<h2> <strong>Commercial Renovation Services</strong></h2>
+<div class="container">
+    <div class="card">
+        <h3>Factory Demolitions</h3>
+        <p>"Trust us to handle factory demolitions with precision and safety. Our experienced team ensures efficient dismantling and removal of structures, paving the way for new developments."</p>
+        <button class="button" onclick="toggleImages('demolitionImages')">View Demolition Images</button>
+        <div id="demolitionImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Demolition+1" alt="Demolition Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Demolition+2" alt="Demolition Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Demolition+3" alt="Demolition Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Creating New Structures</h3>
+        <p>"From concept to completion, we excel in creating new structures that meet your business needs. Our innovative designs and quality construction guarantee a functional and visually appealing space."</p>
+        <button class="button" onclick="toggleImages('newStructuresImages')">View Structure Images</button>
+        <div id="newStructuresImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Structure+1" alt="Structure Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Structure+2" alt="Structure Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Structure+3" alt="Structure Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>Property Location Sales</h3>
+        <p>"Maximize your property's potential with our expertise in location sales. We identify prime opportunities, negotiate deals, and facilitate transactions to help you make the most of your real estate assets."</p>
+        <button class="button" onclick="toggleImages('locationImages')">View Location Images</button>
+        <div id="locationImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=Location+1" alt="Location Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Location+2" alt="Location Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Location+3" alt="Location Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <h3>New Builds</h3>
+        <p>"Embark on a new construction journey with us. Our new builds combine cutting-edge design with top-notch materials, delivering commercial spaces that are both impressive and practical."</p>
+        <button class="button" onclick="toggleImages('newBuildsImages')">View New Build Images</button>
+        <div id="newBuildsImages" class="image-container">
+            <img src="https://via.placeholder.com/300x200?text=New+Build+1" alt="New Build Image 1">
+            <img src="https://via.placeholder.com/300x200?text=New+Build+2" alt="New Build Image 2">
+            <img src="https://via.placeholder.com/300x200?text=New+Build+3" alt="New Build Image 3">
+        </div>
+    </div>
+</div>
+
+
+    <!-- Flexbox Section: Highlight Services -->
+<section class="flex-container">
+    <div class="flex-item">
+        <h3 class="emphasis">🏡 Full Home Renovations</h3>
+        <p>Transform your entire living space into something extraordinary with our comprehensive renovation services.</p>
+    </div>
+    <div class="flex-item">
+        <h3 class="emphasis">🔨 Kitchen & Bathroom Remodeling</h3>
+        <p>Our expert team specializes in modernizing your kitchen and creating spa-like bathroom experiences.</p>
+    </div>
+    <div class="flex-item">
+        <h3 class="emphasis">🌳 Outdoor Living Enhancements</h3>
+        <p>Expand your living area with custom patios, decks, and outdoor kitchens for a perfect backyard retreat.</p>
+    </div>
+</section>
+
+<!-- Grid Layout for Process Steps -->
+<section class="grid-container">
+    <div class="grid-item">
+        <h3 class="emphasis">Inspiration Workshop</h3>
+        <p>Kickstart your renovation journey by exploring design ideas and collaborating with our experts.</p>
+    </div>
+    <div class="grid-item">
+        <h3 class="emphasis">Tailored Design</h3>
+        <p>We create 3D renderings, helping you visualize every detail before the work begins.</p>
+    </div>
+    <div class="grid-item">
+        <h3 class="emphasis">Transparent Communication</h3>
+        <p>Stay informed throughout the project with regular updates from our project managers.</p>
+    </div>
+    <div class="grid-item">
+        <h3 class="emphasis">Post-Renovation Support</h3>
+        <p>We provide continued support after the renovation, ensuring complete satisfaction.</p>
+    </div>
+</section>
+
+<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px;"></div>
+    <h2 style="text-align: center; color: #3C6E47;">The Renovation Journey</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+            <tr>
+                <th style="background-color: #FFC700; color: #3C6E47; padding: 15px;">Step</th>
+                <th style="background-color: #FFC700; color: #3C6E47; padding: 15px;">What We Do</th>
+                <th style="background-color: #FFC700; color: #3C6E47; padding: 15px;">Why It Matters</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">1. Vision Discovery</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">We conduct an initial consultation to understand your needs and dreams.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Ensures your vision is at the forefront of the project.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #fff;">2. Creative Concept</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Our designers create sketches and 3D models to visualize your space.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Helps you see the potential before any work starts.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">3. Budget Blueprint</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">We provide a detailed budget breakdown for materials and labor.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Keeps you informed and prevents unexpected costs.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #fff;">4. Style Selection</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Choose from high-quality materials and finishes tailored to your taste.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Personalizes your space and enhances its appeal.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">5. Regulatory Readiness</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">We handle all necessary permits and approvals.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Simplifies the process and ensures compliance with local laws.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #fff;">6. Timeline Tactics</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">We create a detailed project timeline for efficient execution.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Minimizes disruption to your daily life and keeps the project on track.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">7. Demolition Day</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Carefully prepare the site and handle any demolition needed.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Clears the way for your new vision to take shape.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #fff;">8. Craftsmanship in Action</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Our skilled team executes the construction with attention to detail.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Ensures high-quality workmanship throughout the project.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">9. Quality Checkpoint</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Conduct thorough inspections to maintain standards.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Guarantees that everything meets our quality expectations.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #fff;">10. Reveal & Celebration</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Host a final walkthrough to showcase your transformed space.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #fff;">Celebrates the successful completion of your vision.</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #0B2B26; padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">11. Ongoing Support</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Provide post-completion support and maintenance advice.</td>
+                <td style="padding: 15px; border: 1px solid #ddd; background-color: #f0f8e2;">Ensures your renovation remains beautiful and functional for years.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 20px;"></div>
+    <h2 style="text-align: center; color: #3C6E47;">Client's Feedback on Renovation</h2>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px;">
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #fff; width: 90%; max-width: 600px;">
+            <h3 style="color: #0B2B26;">Malik Awan.</h3>
+            <div style="display: flex; gap: 2px;">
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #CCCCCC; font-size: 20px;">★</span>
+            </div>
+            <p style="margin: 10px 0;">"The renovation of my kitchen was seamless! The team was professional, and their attention to detail was impressive. I love my new space!"</p>
+        </div>
+
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #fff; width: 90%; max-width: 600px;">
+            <h3 style="color: #0B2B26;">Asad Kiyani.</h3>
+            <div style="display: flex; gap: 2px;">
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #CCCCCC; font-size: 20px;">★</span>
+            </div>
+            <p style="margin: 10px 0;">"Great experience with my home renovation! They listened to my ideas and made them come to life. A few minor delays, but overall very satisfied."</p>
+        </div>
+
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #fff; width: 90%; max-width: 600px;">
+            <h3 style="color: #0B2B26;">Baber Usman.</h3>
+            <div style="display: flex; gap: 2px;">
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+            </div>
+            <p style="margin: 10px 0;">"I can't recommend this renovation company enough! They transformed my outdated bathroom into a modern oasis. Exceptional work!"</p>
+        </div>
+
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #fff; width: 90%; max-width: 600px;">
+            <h3 style="color: #0B2B26;">Hamza Rauf.</h3>
+            <div style="display: flex; gap: 2px;">
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #CCCCCC; font-size: 20px;">★</span>
+                <span style="color: #CCCCCC; font-size: 20px;">★</span>
+            </div>
+            <p style="margin: 10px 0;">"The design of my new living room is stunning, but the project took longer than expected. Happy with the outcome, but the wait was frustrating."</p>
+        </div>
+
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #fff; width: 90%; max-width: 600px;">
+            <h3 style="color: #0B2B26;">Daniyal Malik.</h3>
+            <div style="display: flex; gap: 2px;">
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+                <span style="color: #FFC700; font-size: 20px; text-shadow: 0 0 5px #FFC700;">★</span>
+            </div>
+            <p style="margin: 10px 0;">"Fantastic renovation experience! The team was friendly, and they communicated every step of the way. My house feels brand new!"</p>
+        </div>
+    </div>
+<br>
+<br>
+    <h3 style="color: #3C6E47; text-align: center; margin-top: 30px;">Join Our Happy Clients!</h3>
+    <p style="text-align: center; color: #666;">Your feedback matters to us. Let us know how we can help you create your dream renovation!</p>
+</div>
+<br>
+
+<footer>
+    <p>&copy; 2024 Elite Construction and Design. All Rights Reserved.</p>
+    <p>Contact:<a href="https://wa.me/923223237533">Contact on WhatsApp for further details !</a></p> 
+
+</footer>
+
+<script>
+function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
+
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    function toggleImages(imageId) {
+        const imgContainer = document.getElementById(imageId);
+        imgContainer.style.display = imgContainer.style.display === "block" ? "none" : "block";
+    }
+    
+</script>
+
+</body>
+</html>
