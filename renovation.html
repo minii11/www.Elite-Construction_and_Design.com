@@ -223,27 +223,30 @@
             margin-bottom: 10px;
         }
         /* Grid Layout */
+
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr; /* Single column layout for mobile */
     gap: 8px; /* Reduced space between items */
-    padding: 8px; /* Reduced padding around the grid */
+    padding: 8px; /* Padding around the grid */
     max-width: 100%; /* Ensure it doesn't exceed 100% width */
     margin: 0 auto; /* Center the grid */
 }
 
 .grid-item {
-    padding: 15px; /* Reduced padding inside each item */
+    padding: 10px; /* Smaller padding inside each item */
     border: 1px solid orangered;
     text-align: center;
     border-radius: 8px; /* Rounded corners */
     background-color: #fff; /* Background color */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 0.9em; /* Slightly smaller font size */
 }
 
 /* Optional: Add hover effect */
 .grid-item:hover {
-    transform: translateY(-3px); /* Slight lift on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
     transition: transform 0.2s; /* Smooth effect */
 }
         
