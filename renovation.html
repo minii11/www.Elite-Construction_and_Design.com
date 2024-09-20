@@ -149,21 +149,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-           /* Flexbox Section */
-           .flex-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px;
-            background-color:#d1ffbd ;
-        }
-        .flex-item {
-            background-color: #f9e076;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            flex: 1;
-        }
+          
 
         body {
             font-family: 'Arial', sans-serif;
@@ -223,32 +209,11 @@
             margin-bottom: 10px;
         }
         /* Grid Layout */
-.grid-container {
-    display: flex; /* Use flexbox for stacking */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 8px; /* Space between items */
-    padding: 8px; /* Padding around the grid */
-    max-width: 100%; /* Ensure it doesn't exceed 100% width */
-    margin: 0 auto; /* Center the grid */
-}
-
-.grid-item {
-    width: 90%; /* Set width to 90% of the container */
-    padding: 10px; /* Padding inside each item */
-    border: 1px solid orangered;
-    text-align: center;
-    border-radius: 8px; /* Rounded corners */
-    background-color: #fff; /* Background color */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    font-size: 0.9em; /* Slightly smaller font size */
-}
-
-/* Optional: Add hover effect */
-.grid-item:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    transition: transform 0.2s; /* Smooth effect */
-}  
+       .grid-item {
+            padding: 20px;
+            border: 1px solid orangered;
+            text-align: center;
+        }
         footer {
             background-color: #8B5A2B; /* Brown */
             color: #f5f5f5; /* Light Gray */
@@ -495,18 +460,19 @@
 
 
     <!-- Flexbox Section: Highlight Services -->
-<section class="flex-container">
-    <div class="flex-item">
-        <h3 class="emphasis">🏡 Full Home Renovations</h3>
-        <p>Transform your entire living space into something extraordinary with our comprehensive renovation services.</p>
+<!-- Flexbox Section: Highlight Services -->
+<section style="display: flex; flex-direction: column; align-items: center; padding: 20px; background-color: #d1ffbd;">
+    <div style="background-color: #f9e076; padding: 20px; margin: 10px; text-align: center; width: 90%; max-width: 400px;">
+        <h3 style="margin: 0;">🏡 Full Home Renovations</h3>
+        <p style="margin: 0;">Transform your entire living space into something extraordinary with our comprehensive renovation services.</p>
     </div>
-    <div class="flex-item">
-        <h3 class="emphasis">🔨 Kitchen & Bathroom Remodeling</h3>
-        <p>Our expert team specializes in modernizing your kitchen and creating spa-like bathroom experiences.</p>
+    <div style="background-color: #f9e076; padding: 20px; margin: 10px; text-align: center; width: 90%; max-width: 400px;">
+        <h3 style="margin: 0;">🔨 Kitchen & Bathroom Remodeling</h3>
+        <p style="margin: 0;">Our expert team specializes in modernizing your kitchen and creating spa-like bathroom experiences.</p>
     </div>
-    <div class="flex-item">
-        <h3 class="emphasis">🌳 Outdoor Living Enhancements</h3>
-        <p>Expand your living area with custom patios, decks, and outdoor kitchens for a perfect backyard retreat.</p>
+    <div style="background-color: #f9e076; padding: 20px; margin: 10px; text-align: center; width: 90%; max-width: 400px;">
+        <h3 style="margin: 0;">🌳 Outdoor Living Enhancements</h3>
+        <p style="margin: 0;">Expand your living area with custom patios, decks, and outdoor kitchens for a perfect backyard retreat.</p>
     </div>
 </section>
 
