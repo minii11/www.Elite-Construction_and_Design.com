@@ -6,8 +6,7 @@
     <title>Construction Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Gentle+Calligraphy&display=swap" rel="stylesheet"> <!-- Include the font -->
     <style>
-             
-   * {
+               * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -138,19 +137,15 @@
         .image-carousel img.active {
             display: block; /* Show only the active image */
         }
-    footer {
-    background-color: #355E3B; /* Green */
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed; /* Make footer stick to the bottom */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%; /* Ensure full width */
-    z-index: 1000; /* Make sure it stays above other elements */
-}
-
+        footer {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
         @media (max-width: 600px) {
             .images img {
                 width: 100%;
@@ -171,31 +166,29 @@
 </head>
 <body>
 
- <header>
+    <header>
         <img src="image.jpg" alt="Elite Construction">
         <h1>Elite Construction</h1>
         <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
     </header>
 
     <div class="sidebar" id="sidebar">
+        <br>
         <a href="index.html">Home</a>
         <a href="Get Service.html">Get Service</a>
         <a href="contact.html">Contact</a>
         <a href="Our Works">Our Works</a>
         <a href="about.html">About</a>
-          <a href="construction.html">Construction</a>
-        <a href="real-estate.html">Real Estate</a>
-        <a href="renovation.html">Renovation</a>
-        <a href="rentals.html">Rentals</a>
-        <a href="designs.html">Designs</a>
+        <a href="construction.html">Construction</a>
+    <a href="real-estate.html">Real Estate</a>
+    <a href="renovation.html">Renovation</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="designs.html">Designs</a>
     </div>
-         
-    
-<br>
-    
+
 
 <div class="container">
-  <br>
+  
 
     <!-- Image Carousel -->
     <div class="image-carousel">
@@ -279,13 +272,24 @@
 </div>
 
 <footer>
-    <p>&copy; 2024 Elite Construction and Design. All rights reserved.</p>
-    
+    <p>&copy; 2024 [Elite Construction and Design]. All rights reserved.</p>
+      <a href="index.html" style="background-color: green; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 1em;">Home</a>
 </footer>
 
 <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.image-carousel img');
+    const totalImages = images.length;
 
-      function toggleSidebar() {
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 2000); // Change image every 2 seconds
+
+    function toggleSidebar() {
           var sidebar = document.getElementById("sidebar");
           if (sidebar.style.display === "block") {
               sidebar.style.display = "none";
