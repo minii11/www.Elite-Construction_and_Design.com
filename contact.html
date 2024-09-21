@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Construction Contact</title>
     <style>
-        * {
-            margin-top:-20;
+       * {
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
@@ -14,14 +14,15 @@
 
         body {
             background-color: #f9f9f9;
-            padding: 20px;
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 20px;
         }
 
         header {
             display: flex;
-            align-items: center;
-            justify-content: center; /* Center the company name */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
             padding: 15px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,42 +36,40 @@
         header img {
             width: 70px;
             height: auto;
-            position: absolute;
-            left: 15px;
         }
 
         header h1 {
-            color: #355e3b; /* Hunter green */
+            color: #355E3B;
             font-size: 24px;
             margin: 0;
             text-align: center;
             flex-grow: 1;
-            height:50px;
         }
 
         .menu-icon {
             font-size: 40px;
             cursor: pointer;
-            color: #355e3b; /* Hunter green */
-            position: absolute;
-            right: 15px;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
         }
 
         .sidebar {
             display: none;
             position: fixed;
-            top: 70px; /* Positioned below the header */
+            top: 80px;
             left: 0;
             width: 100%;
-            background-color:#FBE106;
-            color: #ffcc99;
-            z-index: 1100;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
         }
 
         .sidebar a {
-            padding: 10px;
+            padding: 20px;
             text-decoration: none;
-            font-size: 20px; /* Increased font size */
+            font-size: 20px;
             color: brown;
             display: block;
             text-align: center;
@@ -80,12 +79,24 @@
             background-color: lightyellow;
         }
 
-        .main-content {
-            margin-top: 80px; /* Ensure content starts below the header */
-            padding: 20px;
-            text-align: center;
-        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
         .sticker {
             background-color: #ffffff;
             border-radius: 12px; /* Increased border radius */
@@ -172,8 +183,8 @@
 </head>
 <body>
 
-    <header>
-        <img src="image.jpg" alt="Elite Construction Logo">
+  <header>
+        <img src="image.jpg" alt="Elite Construction">
         <h1>Elite Construction</h1>
         <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
     </header>
@@ -182,15 +193,16 @@
         <a href="index.html">Home</a>
         <a href="Get Service.html">Get Service</a>
         <a href="contact.html">Contact</a>
-        <a href="Our Works.html">Our Works</a>
-       
+        <a href="Our Works">Our Works</a>
         <a href="about.html">About</a>
-           <a href="construction.html">Construction</a>
+        <a href="construction.html">Construction</a>
         <a href="real-estate.html">Real Estate</a>
         <a href="renovation.html">Renovation</a>
         <a href="rentals.html">Rentals</a>
         <a href="designs.html">Designs</a>
+    
     </div>
+
 
     <div class="main-content">
        
@@ -241,10 +253,14 @@
     </div>
 
     <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
-        }
+     function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
     </script>
 
 </body>
