@@ -6,7 +6,8 @@
     <title>Construction Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Gentle+Calligraphy&display=swap" rel="stylesheet"> <!-- Include the font -->
     <style>
-               * {
+             
+   * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -68,7 +69,7 @@
         }
 
         .sidebar a {
-            padding: 10px;
+            padding: 20px;
             text-decoration: none;
             font-size: 20px;
             color: brown;
@@ -170,25 +171,26 @@
 </head>
 <body>
 
-    <header>
+ <header>
         <img src="image.jpg" alt="Elite Construction">
         <h1>Elite Construction</h1>
         <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
     </header>
 
     <div class="sidebar" id="sidebar">
-        <br>
         <a href="index.html">Home</a>
         <a href="Get Service.html">Get Service</a>
         <a href="contact.html">Contact</a>
         <a href="Our Works">Our Works</a>
         <a href="about.html">About</a>
-           <a href="construction.html">Construction</a>
+          <a href="construction.html">Construction</a>
         <a href="real-estate.html">Real Estate</a>
         <a href="renovation.html">Renovation</a>
         <a href="rentals.html">Rentals</a>
         <a href="designs.html">Designs</a>
     </div>
+         
+    
 <br>
     
 
@@ -282,19 +284,8 @@
 </footer>
 
 <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.image-carousel img');
-    const totalImages = images.length;
 
-    function showNextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % totalImages;
-        images[currentIndex].classList.add('active');
-    }
-
-    setInterval(showNextImage, 2000); // Change image every 2 seconds
-
-    function toggleSidebar() {
+      function toggleSidebar() {
           var sidebar = document.getElementById("sidebar");
           if (sidebar.style.display === "block") {
               sidebar.style.display = "none";
