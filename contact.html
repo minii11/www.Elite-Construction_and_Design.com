@@ -21,8 +21,8 @@
 
         header {
             display: flex;
-            align-items: center; /* Center items vertically */
-            justify-content: space-between; /* Distribute items with space between them */
+            align-items: center;
+            justify-content: space-between;
             padding: 15px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -97,57 +97,60 @@
                 font-size: 18px;
             }
         }
+
         .sticker {
             background-color: #ffffff;
-            border-radius: 12px; /* Increased border radius */
-            padding: 30px; /* Increased padding */
-            margin: 20px auto; /* Increased margin */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Increased box-shadow */
-            font-size: 20px; /* Increased font size */
-            display: inline-block;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px auto;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            display: block;
             width: calc(100% - 40px);
-            max-width: 700px; /* Increased max width */
+            max-width: 700px;
+            text-align: center; /* Center text */
             transition: transform 0.2s;
         }
 
         .sticker:hover {
-            transform: scale(1.05); /* Slightly increased scale on hover */
+            transform: scale(1.05);
             cursor: pointer;
         }
 
         .icon {
-            width: 60px; /* Increased icon size */
+            width: 60px;
             height: 60px;
             display: inline-block;
-            margin-right: 15px; /* Increased margin */
+            margin-bottom: 15px; /* Adjust margin for better centering */
             vertical-align: middle;
             transition: fill 0.2s;
         }
 
         .dark-purple {
-            fill: #355e3b; /* Hunter green */
+            fill: #355e3b;
         }
 
         .sticker:hover .icon {
-            fill: #ff7f50; /* Coral orange */
+            fill: #ff7f50;
         }
 
         .header {
-            font-size: 32px; /* Increased font size */
+            font-size: 32px;
             font-weight: bold;
             margin-bottom: 20px;
             color: black;
         }
 
         .message {
-            font-size: 20px; /* Increased font size */
-            color: #a9a9a9; /* Light grey */
+            font-size: 20px;
+            color: #a9a9a9;
             font-weight: bold;
             margin: 20px 0;
+            text-align: center; /* Center message */
         }
 
         img {
-            max-width: 100%; /* Ensure images are responsive */
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -155,30 +158,39 @@
 
         @media (max-width: 768px) {
             .sticker {
-                font-size: 20px; /* Adjust font size for mobile */
-                padding: 20px; /* Adjust padding for mobile */
+                font-size: 20px;
+                padding: 20px;
             }
 
             header h1 {
-                font-size: 20px; /* Adjust header font size for mobile */
-                text-align:center;
-                line-height:25px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 25px;
+            }
+
+            .sticker {
+                text-align: center;
             }
         }
 
         @media (max-width: 480px) {
             .sticker {
-                font-size: 18px; /* Further reduce font size for very small screens */
-                padding: 15px; /* Further reduce padding for very small screens */
+                font-size: 18px;
+                padding: 15px;
             }
 
             header h1 {
-                font-size: 18px; /* Further reduce header font size for very small screens */
+                font-size: 18px;
+            }
+
+            .sticker {
+                text-align: center; /* Ensure text is centered on very small screens */
             }
         }
+
         .phone-number {
-    font-size: 14px; /* Adjust this value as needed */
-}
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -202,58 +214,46 @@
         <a href="renovation.html">Renovation</a>
         <a href="rentals.html">Rentals</a>
         <a href="designs.html">Designs</a>
-    
     </div>
 
-
     <div class="main-content">
-       <br>
-        <br>
-        <br>
-        <br>
-     <img src="./img contact.jpg" alt="">
+       <br><br><br><br>
 
-        <div class="message">
+       <img src="./img contact.jpg" alt="">
+
+       <div class="message">
             We are at your service, ready to provide guidance and support. Your satisfaction is our priority. Reach out to us for assistance anytime.
-        </div>
-<br>
+       </div>
 
-     <img src="./img card1.jpg" alt="">
+       <br>
 
-        <img src="./img card2.jpg" alt="">
+       <img src="./img card1.jpg" alt="">
+       <img src="./img card2.jpg" alt="">
         
-        <!-- Email Sticker -->
-<br>
-<div class="sticker">
-    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path class="dark-purple" d="M12 13.5l-11-7V5l11 7 11-7v1.5l-11 7zM0 9l12 8 12-8V19H0V9z"/>
-    </svg>
-    <span style="font-size: 14px;">Email: <strong>eliteconstruction3237@gmail.com</strong></span>
-</div>
+       <!-- Email Sticker -->
+       <div class="sticker">
+           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+               <path class="dark-purple" d="M12 13.5l-11-7V5l11 7 11-7v1.5l-11 7zM0 9l12 8 12-8V19H0V9z"/>
+           </svg>
+           <span style="font-size: 14px;">Email: <strong>eliteconstruction3237@gmail.com</strong></span>
+       </div>
 
-        
-       
+       <!-- Contact Sticker -->
+       <div class="sticker">
+           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+               <path class="dark-purple" d="M6.62 10.79c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zm11.09-5.18c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zM12 2C7.06 2 3 6.06 3 11c0 3.87 3.13 7 7 7 1.48 0 2.86-.48 4-1.29L21 22l1-1-6.29-6.29C16.52 13.86 17 12.48 17 11c0-4.94-4.06-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.48-.48 2.86-1.29 4L12 13.59V10h-2V8h2V6h-2V4h2z"/>
+           </svg>
+           <span>Contact: <strong class="phone
+           <span>Contact: <strong class="phone-number">+923418448889, +923223237533</strong></span>
+       </div>
 
-      <!-- Contact Sticker -->
-<div class="sticker">
-    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path class="dark-purple" d="M6.62 10.79c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zm11.09-5.18c-.97 0-1.76.79-1.76 1.76 0 .97.79 1.76 1.76 1.76 1.53 0 2.76-1.23 2.76-2.76 0-.97-.79-1.76-1.76-1.76zm0 4.76c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2zM12 2C7.06 2 3 6.06 3 11c0 3.87 3.13 7 7 7 1.48 0 2.86-.48 4-1.29L21 22l1-1-6.29-6.29C16.52 13.86 17 12.48 17 11c0-4.94-4.06-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.48-.48 2.86-1.29 4L12 13.59V10h-2V8h2V6h-2V4h2z"/>
-    </svg>
-    <span>Contact: <strong class="phone-number">+923418448889,+923223237533</strong></span>
-</div>
-
-
-
-
-
-        
-        <!-- Location Sticker -->
-        <div class="sticker">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path class="dark-purple" d="M12 2C8.1 2 5 5.1 5 9c0 2.9 4 7 7 11 3-4 7-8.1 7-11 0-3.9-3.1-7-7-7zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-            </svg>
-            <span>Location: <strong>Design House 17D 3rd floor commercial Area DHA EME Phase 12 Lahore, Punjab, Pakistan</strong></span>
-        </div>
+       <!-- Location Sticker -->
+       <div class="sticker">
+           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+               <path class="dark-purple" d="M12 2C8.1 2 5 5.1 5 9c0 2.9 4 7 7 11 3-4 7-8.1 7-11 0-3.9-3.1-7-7-7zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+           </svg>
+           <span>Location: <strong>Design House 17D 3rd floor commercial Area DHA EME Phase 12 Lahore, Punjab, Pakistan</strong></span>
+       </div>
     </div>
 
     <script>
