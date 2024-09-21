@@ -260,6 +260,94 @@
         font-size: 18px;
         color: #355e3b;
     }
+        
+    .process-section {
+        background-color: #e2f0d9; /* Light green */
+        padding: 50px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .process-section h2 {
+        font-family: 'Dancing Script', cursive; /* Gentle calligraphy */
+        color: #4b8a5f; /* Darker green */
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        color: #6e9a35; /* Slightly darker green */
+        margin-bottom: 40px;
+        font-family: Arial, sans-serif;
+    }
+
+    .process-steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .process-card {
+        background-color: #afe1af; /* Light yellow */
+        border-radius: 15px;
+        padding: 30px;
+        width: 300px;
+        text-align: left;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+
+    .process-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-number {
+        position: absolute;
+        top: -25px;
+        left: 20px;
+        background-color: #4b8a5f; /* Darker green */
+        color: white;
+        font-size: 24px;
+        font-family: 'Dancing Script', cursive;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .process-card h3 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 24px;
+        color: #4b8a5f; /* Darker green */
+        margin: 30px 0 10px 0;
+    }
+
+    .process-card p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .process-steps {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .process-card {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -381,19 +469,43 @@
     </div>
 </section>
 
-<section>
+<section class="process-section">
     <h2>Our Process</h2>
-    <p>At Elite Construction and Design, we follow a streamlined process to ensure a seamless experience for our clients:</p>
-    <ol>
-        <li><strong>Initial Consultation:</strong> We meet with you to discuss your needs, preferences, and budget.</li>
-        <li><strong>Property Search:</strong> Our team searches for properties that match your criteria, whether for purchase or rent.</li>
-        <li><strong>Property Viewing:</strong> We arrange viewings to help you assess potential homes or investments.</li>
-        <li><strong>Negotiation:</strong> Our skilled negotiators work to get you the best deal possible.</li>
-        <li><strong>Documentation:</strong> We assist with all necessary paperwork to ensure a smooth transaction.</li>
-        <li><strong>Post-Sale Support:</strong> Our commitment to you continues even after the sale, offering ongoing support and property management services as needed.</li>
-    </ol>
+    <p class="intro-text">At Elite Construction and Design, we follow a streamlined process to ensure a seamless experience for our clients:</p>
+    
+    <div class="process-steps">
+        <div class="process-card">
+            <div class="step-number">1</div>
+            <h3>Initial Consultation</h3>
+            <p>We meet with you to discuss your needs, preferences, and budget.</p>
+        </div>
+        <div class="process-card">
+            <div class="step-number">2</div>
+            <h3>Property Search</h3>
+            <p>Our team searches for properties that match your criteria, whether for purchase or rent.</p>
+        </div>
+        <div class="process-card">
+            <div class="step-number">3</div>
+            <h3>Property Viewing</h3>
+            <p>We arrange viewings to help you assess potential homes or investments.</p>
+        </div>
+        <div class="process-card">
+            <div class="step-number">4</div>
+            <h3>Negotiation</h3>
+            <p>Our skilled negotiators work to get you the best deal possible.</p>
+        </div>
+        <div class="process-card">
+            <div class="step-number">5</div>
+            <h3>Documentation</h3>
+            <p>We assist with all necessary paperwork to ensure a smooth transaction.</p>
+        </div>
+        <div class="process-card">
+            <div class="step-number">6</div>
+            <h3>Post-Sale Support</h3>
+            <p>Our commitment continues after the sale, offering ongoing support and property management services as needed.</p>
+        </div>
+    </div>
 </section>
-
 
 <section>
     <h2>Why Choose Us?</h2>
