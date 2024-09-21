@@ -211,6 +211,55 @@
         border-radius: 10px;
         height: auto;
     }
+        .reviews-section {
+        background-color: #f7f9e7; /* Light yellow background */
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .reviews-section h2 {
+        font-family: 'Dancing Script', cursive; /* Gentle calligraphy font */
+        color: #355e3b; /* Light green for heading */
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        color: #6b8e23; /* Soft green text */
+        margin-bottom: 40px;
+        font-family: Arial, sans-serif;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px;
+    }
+
+    .testimonial {
+        background-color: #eaf7df; /* Light green background */
+        padding: 20px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial strong {
+        font-family: 'Dancing Script', cursive; /* Calligraphy for names */
+        font-size: 18px;
+        color: #355e3b;
+    }
     </style>
 </head>
 <body>
@@ -379,20 +428,23 @@
 
 
 
-<section>
+<section class="reviews-section">
     <h2>Client Reviews</h2>
-    <p>Don't just take our word for it—here's what our satisfied clients have to say:</p>
-    <div class="testimonial">
-        <p>"Elite Construction and Design transformed our dream home into a reality! Their attention to detail and commitment to quality are unparalleled." — Saad Ali.</p>
-    </div>
-    <div class="testimonial">
-        <p>"The property management services provided by Elite have been exceptional. They handle everything with professionalism and care." — Mubashir Ayaz.</p>
-    </div>
-    <div class="testimonial">
-        <p>"I was impressed by their knowledge of the market. They helped me find the perfect rental property in no time!" — Muhammad Kamran.</p>
-    </div>
-    <div class="testimonial">
-        <p>"The renovation of my kitchen was seamless and stress-free. I couldn't be happier with the results!" — Abdullah kazi.</p>
+    <p class="intro-text">Don't just take our word for it—here's what our satisfied clients have to say:</p>
+    
+    <div class="reviews-grid">
+        <div class="testimonial">
+            <p>"Elite Construction and Design transformed our dream home into a reality! Their attention to detail and commitment to quality are unparalleled." <br><strong>— Saad Ali</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"The property management services provided by Elite have been exceptional. They handle everything with professionalism and care." <br><strong>— Mubashir Ayaz</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"I was impressed by their knowledge of the market. They helped me find the perfect rental property in no time!" <br><strong>— Muhammad Kamran</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"The renovation of my kitchen was seamless and stress-free. I couldn't be happier with the results!" <br><strong>— Abdullah Kazi</strong></p>
+        </div>
     </div>
 </section>
 
