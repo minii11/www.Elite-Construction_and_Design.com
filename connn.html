@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #4d4d4d; /* Dark grey for text */
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: auto; /* Maintain original height */
+            display: block;
+            margin: auto;
+        }
+
+        .text-section {
+            padding: 20px;
+            background-color: #fff9c4; /* Lightest soft yellow */
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .section-heading {
+            background-color: #e0f2f1; /* Lightest green */
+            color: #4CAF50; /* Hunter green */
+            padding: 10px;
+            font-family: 'Gentle Calligraphy', cursive;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: yellow; /* Yellow for headings */
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .text-section {
+                padding: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="image1.jpg" class="slide-img" alt="Image 1">
+    </div>
+    <div class="slides">
+        <img src="image2.jpg" class="slide-img" alt="Image 2">
+    </div>
+    <div class="slides">
+        <img src="image3.jpg" class="slide-img" alt="Image 3">
+    </div>
+    <div class="slides">
+        <img src="image4.jpg" class="slide-img" alt="Image 4">
+    </div>
+    <div class="slides">
+        <img src="image5.jpg" class="slide-img" alt="Image 5">
+    </div>
+    <div class="slides">
+        <img src="image6.jpg" class="slide-img" alt="Image 6">
+    </div>
+    <div class="slides">
+        <img src="image7.jpg" class="slide-img" alt="Image 7">
+    </div>
+</div>
+
+<div class="text-section">
+ 
+    <!-- Welcome Section -->
+<section style="max-width: 800px; margin: auto; padding: 20px; background-color: #f9fcd9; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+    <h2 style="font-family: 'Gentle Calligraphy', cursive; font-size: 2.5em; color: #4CAF50; padding-bottom: 10px; border-bottom: 3px solid #FFC300;">
+        Discover Your Perfect Home
+    </h2>
+    
+    <p style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 1.2em; line-height: 1.6; margin-top: 20px;">
+        Welcome to our Premium Rental Services. 
+        <strong>Whether you’re looking for a temporary residence, a spacious family home, or a luxury apartment, we have tailored rental solutions to fit your needs.</strong>
+    </p>
+
+    <p style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 1.2em; line-height: 1.6;">
+        Our properties are designed with modern architecture, prime locations, and affordable prices. 
+        <strong>We offer flexible rental terms, customized leasing options, and 24/7 maintenance services, ensuring you enjoy a hassle-free living experience.</strong>
+    </p>
+    </div>
+</section>
+   
+<ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 1.1em; line-height: 1.6; padding-left: 0; list-style-type: none;"></ul>
+    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px;">
+        <strong>Fast & Easy Application Process:</strong> We value your time with a streamlined application process, ensuring quick approvals so you can move in as soon as possible.
+    </li>
+    <li style="background-color:#e9f5e9 ; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px;">
+        <strong>High-Quality Standards:</strong> Each property is maintained to the highest standards, guaranteeing a comfortable, clean, and modern living space.
+    </li>
+    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px;">
+        <strong>Community-Oriented Locations:</strong> Our homes are situated in family-friendly neighborhoods, close to parks, shopping areas, and schools, fostering a strong sense of community.
+    </li>
+</ul>
+</div>
+
+<!-- Home Rental Services Overview -->
+<section style="max-width: 800px; margin: auto; padding: 20px;">
+    <h2 style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #388e3c; text-align: center;">Home Rental Services Overview</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px; border-radius: 8px; overflow: hidden;">
+        <thead style="background-color: #e8f5e9;">
+            <tr>
+                <th style="color: #1b5e20; padding: 10px; border: 2px solid #ffeb3b;">Service Type</th>
+                <th style="color: #1b5e20; padding: 10px; border: 2px solid #ffeb3b;">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #fffde7;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Residential Rentals</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Apartments, single-family homes, and townhouses for long-term living.</td>
+            </tr>
+            <tr style="background-color: #e8f5e9;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Luxury Rentals</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">High-end apartments and villas with premium amenities.</td>
+            </tr>
+            <tr style="background-color: #fffde7;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Vacation Rentals</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Short-term rentals for holidays, including beachfront properties.</td>
+            </tr>
+            <tr style="background-color: #e8f5e9;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Student Housing</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Accommodations tailored for students, including dorms.</td>
+            </tr>
+            <tr style="background-color: #fffde7;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Eco-Friendly Rentals</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Sustainable homes designed with eco-friendly materials.</td>
+            </tr>
+            <tr style="background-color: #e8f5e9;">
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Commercial Rentals</td>
+                <td style="padding: 10px; border: 2px solid #ffeb3b; color: #333;">Shop spaces and commercial properties available for business use.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section style="background-color: #d1ffbd; text-align: center; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);"></section>
+    <h1 style="color: #e0a800; font-family: 'Brush Script MT', cursive; font-size: 28px;">Locations Where We Give Our Services</h1>
+    <p style="color: grey; font-size: 18px;">Offering Rental services specifically in LAHORE</p>
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px;">
+        <strong>Select the desired spot:</strong>
+        <br>
+        <!-- Buttons -->
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/LydJUTj4vhZYEDT26')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Lake City Lahore
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/6gBa4y9B4i43MVqw8')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Bahria Town Lahore
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/h6y5WLzksiDBg41YA')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Valencia Town Lahore
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/jZc2tkSm7mruM2ey8')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Phase 1
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/SfDG7jcJwPah7jns5')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Phase 2
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/PktUhTG8SfY6Fmv7A')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Phase 3
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/kDnkwspHjzwUy1mH7')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Phase 5
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/RyTDaW2z8smJHhPm9')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Phase 6
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/H6PYduSe6yG7XavT6')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA EME
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/AZgaa33nqj3ui9tj6')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit DHA Rahber
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/AG87kuL1R39q4x3UA')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Wapda Town Lahore
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/wLmXm2P9kFhVr9dN6')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Green Acres Lahore
+        </button>
+        <button style="background-color: #ffeb3b; color: #3b8a3b; border: 2px solid #3b8a3b; border-radius: 5px; padding: 10px 15px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 5px;" onclick="window.open('https://maps.app.goo.gl/6dbbAoyk8L9c7TvL6')">
+            <img src="https://img.icons8.com/ios-filled/24/3b8a3b/marker.png" alt="Location" />
+            Visit Bahria Orchard Lahore
+        </button>
+    </div>
+</section>
+<br>
+
+<!-- Rental Stories Section -->
+<section style="max-width: 800px; margin: auto; padding: 20px; background-color: #d6f5d6;">
+    <h2 style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #FFC300; text-align: center;">Stories of People Who Found Their Perfect Rental Home</h2>
+    <article id="story" style="font-family: 'Arial', sans-serif; color: #555; font-style: italic; text-align: center;">
+        <p style="color:#3C6E47; font-size: 1.2em;">Ayesha's New Start</p>
+        <p>"After relocating for a new job, I struggled to find a rental property that met my expectations. I needed a place close to work with a modern design and good security, but every option I found was either too expensive or in the wrong location. Elite Construction and Design made the entire process easy. They found me an affordable apartment in the perfect neighborhood. Now, I can focus on my career without worrying about my home."</p>
+    </article>
+
+    <!-- Navigation Arrows -->
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <button onclick="prevStory()" style="background-color: #555; border: none; color: #fff; font-size: 1.5em; padding: 10px 15px; cursor: pointer;">&#8592;</button>
+        <button onclick="nextStory()" style="background-color: #555; border: none; color: #fff; font-size: 1.5em; padding: 10px 15px; cursor: pointer;">&#8594;</button>
+    </div>
+</section>
+
+<!-- Experience Modern Living Section -->
+<section style="max-width: 100%; margin: auto; padding: 20px; text-align: center; border: 2px solid #e8f5e9; border-radius: 15px; background-color: #f0f0f0;">
+    <h2 style="font-family: 'Dancing Script', cursive; font-size: 1.8em; color:#4CAF50;">Experience Modern Living</h2>
+    <p style="font-family: 'Arial', sans-serif; color: #FFC300 #fdfd96; font-size: 1em; line-height: 1.4;">
+        At Elite Construction and Design, we don’t just provide rental homes—we offer lifestyle experiences that exceed your expectations.
+    </p>
+    <hr style="border: 1px solid white; margin: 20px 0;">
+</section>
+
+<!-- Amenities Section -->
+<section style="max-width: 100%; margin: auto; padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; border: 2px solid #e8f5e9; border-radius: 15px; background-color: #f0f0f0;">
+    
+    <div style="background-color:#fdfd96; border: 2px solid #388e3c; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 15px;">
+        <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #2e7d32;">Luxury Amenities</h3>
+        <ul style="font-family: 'Arial', sans-serif; color: #FFC300; font-size: 1em; line-height: 1.4; padding-left: 10px;">
+            <li><strong>Gyms & Swimming Pools:</strong> Enjoy access to premium amenities designed for your comfort.</li>
+            <li><strong>Rooftop Terraces:</strong> Relax and unwind with breathtaking views.</li>
+            <li><strong>Private Parking:</strong> Convenient and secure parking options for residents.</li>
+        </ul>
+    </div>
+
+    <div style="background-color: #fdfd96; border: 2px solid #388e3c; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 15px;">
+        <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #2e7d32;">Smart Home Technology</h3>
+        <ul style="font-family: 'Arial', sans-serif; color: #FFC300; font-size: 1em; line-height: 1.4; padding-left: 10px;">
+            <li><strong>Voice-Controlled Lighting:</strong> Adjust your ambiance with ease.</li>
+            <li><strong>Climate Control Systems:</strong> Efficient heating and cooling tailored to your preferences.</li>
+            <li><strong>Advanced Security Systems:</strong> Peace of mind with enhanced safety features.</li>
+        </ul>
+    </div>
+
+    <div style="background-color: #fdfd96; border: 2px solid #388e3c; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 15px;">
+        <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #2e7d32;">Custom Interior Designs</h3>
+        <ul style="font-family: 'Arial', sans-serif; color: #FFC300; font-size: 1em; line-height: 1.4; padding-left: 10px;">
+            <li><strong>Modern Minimalism:</strong> Sleek designs for the contemporary lifestyle.</li>
+            <li><strong>Rustic Charm:</strong> Cozy settings that feel like home.</li>
+        </ul>
+    </div>
+</section>
+
+<section style="max-width: 800px; margin: auto;background-color: #e6f9e6; border-radius: 10px;"></section>
+    <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5em; color:#4A9F1A; text-align: center;">Finding Your Perfect Home in Lahore</h2>
+    <p style="font-size: 1.2em; color: #555; text-align: center; margin-bottom: 20px;">
+        We specialize in helping you find the best property that fits your needs and budget.
+    </p>
+    <ul style="list-style: none; padding: 0;">
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-building" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Local Expertise:</strong> Our team knows Lahore inside and out, ensuring you find the perfect neighborhood.
+        </li>
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-search" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Tailored Property Search:</strong> We provide personalized recommendations based on your needs and budget.
+        </li>
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-dollar-sign" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Budget-Friendly Solutions:</strong> We help you find properties within your budget without compromising quality.
+        </li>
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-map-marker-alt" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Prime Locations:</strong> Discover strategic locations that offer convenience and growth potential.
+        </li>
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-chart-line" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Comprehensive Market Analysis:</strong> Get insights into pricing trends and the best investment opportunities.
+        </li>
+        <li style="padding: 15px; border-bottom: 2px solid #388e3c; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-link" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">One-Stop Service:</strong> We guide you through every step, from search to closing the deal.
+        </li>
+        <li style="padding: 15px; color: #555; font-weight: bold;">
+            <span style="display: inline-block; width: 40px; height: 40px; background-color: #FFC300; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px;">
+                <i class="fas fa-handshake" style="color: white;"></i>
+            </span>
+            <strong style="color: #FFC300;">Strong Negotiation Skills:</strong> Our experts ensure you get the best possible deal.
+        </li>
+    </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</section>
+<br>
+
+<section class="section" style="background-color:#E8F5E9; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <div class="section-title" style="font-family: 'Dancing Script', cursive; font-size: 2.5em; text-align: center; margin-bottom: 15px; padding: 15px; background: #FFEB3B; color: green; border-radius: 5px; font-weight: bold;">
+        Explore Our Rental Projects
+    </div>
+    <div class="content" style="text-align: center; padding: 10px;">
+        <p style="font-size: 1.2em; color: #333;">Click the button below to see some of the projects we have given for rent:</p>
+        <button id="revealButton" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 1em; cursor: pointer;">
+            View All Projects
+        </button>
+        <div id="imageContainer" class="hidden" style="display: none; margin-top: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;">
+                <img src="your-image-url-1.jpg" alt="Project 1" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-2.jpg" alt="Project 2" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-3.jpg" alt="Project 3" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-4.jpg" alt="Project 4" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-5.jpg" alt="Project 5" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-6.jpg" alt="Project 6" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-7.jpg" alt="Project 7" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-8.jpg" alt="Project 8" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-9.jpg" alt="Project 9" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-10.jpg" alt="Project 10" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-11.jpg" alt="Project 11" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-12.jpg" alt="Project 12" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-13.jpg" alt="Project 13" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-14.jpg" alt="Project 14" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-15.jpg" alt="Project 15" style="width: 100%; border-radius: 5px;">
+                <img src="your-image-url-16.jpg" alt="Project 16" style="width: 100%; border-radius: 5px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Unique Rental Solutions Section -->
+<section style="max-width: 800px; margin: auto; padding: 20px; background-color: #f9fcd9; border-radius: 8px;">
+    <h2 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.8em; color:#4CAF50; text-align: center; padding-bottom: 10px;">Our Unique Rental Solutions</h2>
+
+    <div style="border: 2px solid #FF7F50; border-radius: 8px; margin: 20px 0; padding: 15px; background-color: #ffffff;">
+        <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Tailored Property Matching</h3>
+        <p style="font-family: 'Arial', sans-serif; color: #4d4d4d;">
+            <strong>Customized Recommendations:</strong> We understand that everyone’s rental needs are different. Our team will match you with properties based on your budget, location preferences, and lifestyle.
+        </p>
+    </div>
+
+    <div style="border: 2px solid #FF7F50; border-radius: 8px; margin: 20px 0; padding: 15px; background-color: #ffffff;">
+        <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Flexible Payment Options</h3>
+        <p style="font-family: 'Arial', sans-serif; color: #4d4d4d;">
+            <strong>Easy Payment Plans:</strong> Choose from monthly, quarterly, or yearly payments that fit your financial situation. We accept various payment methods, including online payments for added convenience.
+        </p>
+    </div>
+
+    <div style="border: 2px solid #FF7F50; border-radius: 8px; margin: 20px 0; padding: 15px; background-color: #ffffff;">
+        <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Move-In Assistance</h3>
+        <p style="font-family: 'Arial', sans-serif; color: #4d4d4d;">
+            <strong>Stress-Free Moving:</strong> We offer professional moving services and help with settling into your new home, including utilities setup and ensuring all appliances are operational.
+        </p>
+    </div>
+
+    <div style="border: 2px solid #FF7F50; border-radius: 8px; margin: 20px 0; padding: 15px; background-color: #ffffff;">
+        <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Fully Furnished Rentals</h3>
+        <p style="font-family: 'Arial', sans-serif; color: #4d4d4d;">
+            <strong>Convenience at Its Best:</strong> For those seeking hassle-free living, our fully furnished properties come with stylish interiors and modern appliances—ready for you to move in.
+        </p>
+    </div>
+</section>
+
+<!-- Include Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Experience Modern Living Section -->
+<section style="max-width: 800px; margin: auto; padding: 20px; background-color: #f9fcd9; border-radius: 8px;">
+    <h2 style="font-family: 'Gentle Calligraphy', cursive; font-size: 2em; color: #FFC300; text-align: center;">Experience Modern Living</h2>
+    <p style="font-family: 'Arial', sans-serif; color: #4d4d4d; text-align: center;">
+        At Elite Construction and Design, we don’t just provide rental homes—we offer lifestyle experiences that exceed your expectations. Our properties combine stunning architecture with modern conveniences to elevate your living standards.
+    </p>
+
+    <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Luxury Amenities</h3>
+    <ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; list-style-type: none; padding: 0; text-align: left;">
+        <li style="margin: 10px 0;"><i class="fas fa-dumbbell" style="color: #A8DAB5;"></i> <strong>Gyms & Swimming Pools:</strong> Enjoy access to premium amenities designed for your comfort and leisure.</li>
+        <li style="margin: 10px 0;"><i class="fas fa-sun" style="color: #A8DAB5;"></i> <strong>Rooftop Terraces:</strong> Relax and unwind with breathtaking views.</li>
+        <li style="margin: 10px 0;"><i class="fas fa-parking" style="color: #A8DAB5;"></i> <strong>Private Parking:</strong> Convenient and secure parking options for residents.</li>
+    </ul>
+
+    <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Smart Home Technology</h3>
+    <ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; list-style-type: none; padding: 0; text-align: left;">
+        <li style="margin: 10px 0;"><i class="fas fa-lightbulb" style="color: #A8DAB5;"></i> <strong>Voice-Controlled Lighting:</strong> Adjust your ambiance with ease.</li>
+        <li style="margin: 10px 0;"><i class="fas fa-thermometer-half" style="color: #A8DAB5;"></i> <strong>Climate Control Systems:</strong> Efficient heating and cooling tailored to your preferences.</li>
+        <li style="margin: 10px 0;"><i class="fas fa-shield-alt" style="color: #A8DAB5;"></i> <strong>Advanced Security Systems:</strong> Peace of mind with enhanced safety features.</li>
+    </ul>
+
+    <h3 style="font-family: 'Gentle Calligraphy', cursive; font-size: 1.5em; color: #A8DAB5;">Custom Interior Designs</h3>
+    <ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; list-style-type: none; padding: 0; text-align: left;">
+        <li style="margin: 10px 0;"><i class="fas fa-paint-roller" style="color: #A8DAB5;"></i> <strong>Modern Minimalism:</strong> Sleek designs for the contemporary lifestyle.</li>
+        <li style="margin: 10px 0;"><i class="fas fa-home" style="color: #A8DAB5;"></i> <strong>Rustic Charm:</strong> Cozy settings that feel like home.</li>
+    </ul>
+</section>
+
+
+
+
+
+<!-- FAQ Section -->
+<section style="max-width: 800px; margin: auto; padding: 20px; background-color:#fdfd96; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+    <h2 style="font-family: 'Gentle Calligraphy', cursive; font-size: 2.5em; color:#4CAF50; text-align: center; padding-bottom: 10px;">Frequently Asked Questions</h2>
+    
+    <div style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 1.1em; line-height: 1.6;">
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                <strong>What types of rental properties do you offer?</strong><br>
+                We provide a diverse range of rental options, including luxury apartments, spacious family homes, and temporary residences. Whatever your needs, we have a perfect match for you!
+            </li>
+            <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                <strong>How do I start the rental application process?</strong><br>
+                Starting your journey with us is easy! Simply fill out our online application form, and our team will guide you through the process.
+            </li>
+            <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                <strong>What amenities can I expect in your properties?</strong><br>
+                Our properties are equipped with modern amenities such as high-quality appliances, in-unit laundry, community fitness centers, and beautiful outdoor spaces.
+            </li>
+        </ul>
+
+        <div id="more-faqs" style="display: none;">
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>Are your rental terms flexible?</strong><br>
+                    Absolutely! We offer flexible rental terms tailored to your lifestyle.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>What is your maintenance policy?</strong><br>
+                    We pride ourselves on our 24/7 maintenance services, ensuring a hassle-free living experience.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>How do I make rental payments?</strong><br>
+                    We offer a variety of payment options for your convenience.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>Can I customize my rental experience?</strong><br>
+                    Yes! We believe in personalized service. Our team is here to help you find properties that align with your preferences.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>What makes your rental services unique?</strong><br>
+                    Our commitment to quality and customer satisfaction sets us apart.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>Do you offer furnished rentals?</strong><br>
+                    Yes! We have fully furnished properties that come with stylish interiors and modern appliances.
+                </li>
+                <li style="margin: 10px 0; border-bottom: 1px solid #006400; padding: 10px;">
+                    <strong>How can I contact you for more information?</strong><br>
+                    We’re always here to help! Feel free to reach out via our website or call us.
+                </li>
+            </ul>
+        </div>
+
+        <button onclick="toggleFAQs()" style="font-family: 'Arial', sans-serif; font-size: 1.1em; background-color:#4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+            See More FAQs
+        </button>
+    </div>
+    <br>
+    <section style="max-width: 800px; margin: auto; padding: 20px; background-color: #e6f9e6; border-radius: 10px;">
+        <h2 style="text-align: center; color: #FFC300;">"Your Trusted Partner in Finding the Perfect Home in Lahore!
+            -Local Knowledge, Tailored Solutions, Your Dream Home Awaits."</h2>
+        <p style="text-align: center; font-size: 1.2em; color: #555;">
+            Ready to find your dream home in Lahore? Contact us today to get started!
+        </p>
+        <h3 style="color: #388e3c;">Contact Information</h3>
+        <p style="color: #555;">
+            Phone:92-3418448889<br>
+            Email:eliteconstruction3237@gmail.com<br>
+            <p>Contact:<a href="https://wa.me/923223237533">Let us guide you</a></p> 
+        </p>
+    
+        <h3 style="color: #388e3c;">Our Mission</h3>
+        <p style="color: #555;">Connecting you with the best properties in Lahore for a seamless rental experience.</p>
+    </section>
+
+</section>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        slides[slideIndex-1].style.animation = "fade 1s";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function toggleFAQs() {
+        var faqs = document.getElementById("more-faqs");
+        if (faqs.style.display === "none") {
+            faqs.style.display = "block";
+        } else {
+            faqs.style.display = "none";
+        }
+    }
+
+    const stories = [
+        { name: "Ayesha's New Start", text: "After relocating for a new job, I struggled to find a rental property that met my expectations. I needed a place close to work with a modern design and good security, but every option I found was either too expensive or in the wrong location. Elite Construction and Design made the entire process easy. They found me an affordable apartment in the perfect neighborhood. Now, I can focus on my career without worrying about my home." },
+        { name: "Ahmed's Growing Family", text: "With our third child on the way, we desperately needed more space. Our old apartment was cramped, and finding a larger rental seemed impossible. After months of searching, we found Elite Construction and Design. They showed us several properties that fit our needs, and within a week, we were moving into a beautiful family home with a spacious backyard. We couldn’t be happier!" },
+        { name: "Fatima's Retirement Dream", text: "My husband and I were looking for a peaceful place to retire, but most rental homes lacked the comfort we wanted. It wasn’t until we found Elite Construction and Design that we finally felt at ease. They offered us a home that exceeded our expectations, complete with a serene garden and all the modern amenities we needed for a relaxed lifestyle." },
+        { name: "Salman's Urgent Need", text: "When my lease ended unexpectedly, I found myself without a home and with very little time to search. The pressure was overwhelming, and I had no idea where to turn. Elite Construction and Design came through for me in a big way. They helped me find a rental within 48 hours, and the process was incredibly smooth. They even assisted with moving in! I can't recommend them enough." },
+        { name: "Sara's Business Relocation", text: "I run a small business and needed a rental property that offered both living space and an area to work from home. Many rental agencies didn't understand my needs, but Elite Construction and Design listened carefully and found the perfect solution. Their attention to detail and understanding of what I needed was amazing. I now have a home that meets my personal and professional needs." },
+        { name: "Usman's Convenient Move", text: "I was transferred to a new city for work and didn’t have much time to find a new place to live. I was nervous about finding a place I’d be happy with in such a short time. Thankfully, Elite Construction and Design came to the rescue. They helped me find a stunning, fully furnished apartment near my office, making my move seamless. I couldn’t believe how fast and easy the process was!" },
+        { name: "Zainab's Affordable Dream", text: "Renting in my budget was a big concern for me, especially as I needed a safe neighborhood for my two young children. I didn’t think I could find something affordable and secure. But with Elite Construction and Design, I found a beautiful two-bedroom house at a reasonable rent. I never thought I could find something so perfect for my family without going over budget." },
+        { name: "Bilal's Investment Decision", text: "I was looking to rent a property for a short term before making the decision to buy, but I wanted the rental to reflect the kind of property I might invest in. Elite Construction and Design offered exactly that. The home they provided had the same features I’d want in a permanent home—beautiful design, great neighborhood, and modern amenities. Now I’m working with them on buying my own house!" },
+        { name: "Hiba's Accessibility Needs", text: "As someone with mobility issues, it’s been a struggle to find a rental home that meets my accessibility requirements. Many rental companies didn’t even consider my specific needs. When I contacted Elite Construction and Design, they went above and beyond, offering me a home with everything I needed, from wheelchair access to specialized bathroom facilities. For the first time, I felt truly comfortable." }
+    ];
+    let currentStory = 0;
+
+    function showStory(index) {
+        const storyElement = document.getElementById('story');
+        storyElement.innerHTML = `<p style="color: #3C6E47; font-size: 1.2em;">${stories[index].name}</p><p>${stories[index].text}</p>`;
+    }
+
+    function nextStory() {
+        currentStory = (currentStory + 1) % stories.length;
+        showStory(currentStory);
+    }
+
+    function prevStory() {
+        currentStory = (currentStory - 1 + stories.length) % stories.length;
+        showStory(currentStory);
+    }
+
+    document.getElementById('revealButton').onclick = function() {
+        document.getElementById('imageContainer').style.display = 'grid';
+        this.style.display = 'none'; // Hide the button after click
+    };
+
+
+</script>
+
+</body>
+</html>
