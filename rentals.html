@@ -5,6 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slideshow</title>
     <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: brown;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -64,6 +156,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+     <header>
+        <img src="image.jpg" alt="Elite Construction">
+        <h1>Elite Construction</h1>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Get Service.html">Get Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="Our Works">Our Works</a>
+        <a href="about.html">About</a>
+         <a href="construction.html">Construction</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="renovation.html">Renovation</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="designs.html">Designs</a>
+    </div>
 
 <div class="slideshow-container">
     <div class="slides">
@@ -108,14 +218,14 @@
     </p>
     </div>
 </section>
-<ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 0.5em; line-height: 1.6; padding-left: 0; list-style-type: none; margin: 0;">
-    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.5em;">
+<ul style="font-family: 'Arial', sans-serif; color: #4d4d4d; font-size: 0.7em; line-height: 1.6; padding-left: 0; list-style-type: none; margin: 0;">
+    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.7em;">
         <strong>Fast & Easy Application Process:</strong> We value your time with a streamlined application process, ensuring quick approvals so you can move in as soon as possible.
     </li>
-    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.5em;">
+    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.7em;">
         <strong>High-Quality Standards:</strong> Each property is maintained to the highest standards, guaranteeing a comfortable, clean, and modern living space.
     </li>
-    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.5em;">
+    <li style="background-color: #e9f5e9; padding: 10px; margin: 10px 0; border: 1px solid #006400; border-radius: 5px; font-size: 0.7em;">
         <strong>Community-Oriented Locations:</strong> Our homes are situated in family-friendly neighborhoods, close to parks, shopping areas, and schools, fostering a strong sense of community.
     </li>
 </ul>
@@ -508,6 +618,15 @@
 </section>
 
 <script>
+
+     function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
     let slideIndex = 0;
     showSlides();
 
