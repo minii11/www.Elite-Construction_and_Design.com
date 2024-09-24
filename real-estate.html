@@ -400,14 +400,15 @@
 
 <body style="text-align: center;">
 
-  <h2>Our Projects</h2>
+<h2>Our Projects</h2>
 
 <p>Click Below to take a look at some of our recent projects showcasing our expertise:</p>
 
 <div>
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Modern Family Home</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle1" style="display: none;">
+        <label for="toggle1" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Modern Family Home</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project1-1.jpg" alt="Project Image 1">
             <img src="project1-2.jpg" alt="Project Image 2">
             <img src="project1-3.jpg" alt="Project Image 3">
@@ -418,8 +419,9 @@
     </div>
     
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Luxury Kitchen Renovation</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle2" style="display: none;">
+        <label for="toggle2" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Luxury Kitchen Renovation</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project2-1.jpg" alt="Project Image 1">
             <img src="project2-2.jpg" alt="Project Image 2">
             <img src="project2-3.jpg" alt="Project Image 3">
@@ -430,8 +432,9 @@
     </div>
 
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Commercial Property Management</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle3" style="display: none;">
+        <label for="toggle3" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Commercial Property Management</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project3-1.jpg" alt="Project Image 1">
             <img src="project3-2.jpg" alt="Project Image 2">
             <img src="project3-3.jpg" alt="Project Image 3">
@@ -442,8 +445,9 @@
     </div>
 
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Eco-Friendly Office Space</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle4" style="display: none;">
+        <label for="toggle4" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Eco-Friendly Office Space</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project4-1.jpg" alt="Project Image 1">
             <img src="project4-2.jpg" alt="Project Image 2">
             <img src="project4-3.jpg" alt="Project Image 3">
@@ -454,8 +458,9 @@
     </div>
 
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Luxury Apartment Complex</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle5" style="display: none;">
+        <label for="toggle5" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Luxury Apartment Complex</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project5-1.jpg" alt="Project Image 1">
             <img src="project5-2.jpg" alt="Project Image 2">
             <img src="project5-3.jpg" alt="Project Image 3">
@@ -466,8 +471,9 @@
     </div>
 
     <div>
-        <button style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Renovation of Historical Building</button>
-        <div class="image-container" style="margin-top: 20px;">
+        <input type="checkbox" id="toggle6" style="display: none;">
+        <label for="toggle6" style="background-color: #ffee8c; color: #06402b; padding: 10px; margin: 10px; cursor: pointer;">Renovation of Historical Building</label>
+        <div class="image-container" style="margin-top: 20px; display: none;">
             <img src="project6-1.jpg" alt="Project Image 1">
             <img src="project6-2.jpg" alt="Project Image 2">
             <img src="project6-3.jpg" alt="Project Image 3">
@@ -477,8 +483,6 @@
         </div>
     </div>
 </div>
-
-
 
     
     <section style="background-color: #d1ffbd; padding: 20px; text-align: center;">
@@ -665,71 +669,17 @@
 
     setInterval(showNextImage, 2000);
 
-function toggleImages(project) {
-            const imageContainer = document.getElementById('images');
-            imageContainer.innerHTML = '';
+/* Show images when the corresponding checkbox is checked */
+    input[type="checkbox"]:checked + label + .image-container {
+        display: block;
+    }
 
-            const images = {
-                project1: [
-                    'project1-1.jpg',
-                    'project1-2.jpg',
-                    'project1-3.jpg',
-                    'project1-4.jpg',
-                    'project1-5.jpg',
-                    'project1-6.jpg',
-                ],
-                project2: [
-                    'project2-1.jpg',
-                    'project2-2.jpg',
-                    'project2-3.jpg',
-                    'project2-4.jpg',
-                    'project2-5.jpg',
-                    'project2-6.jpg',
-                ],
-                project3: [
-                    'project3-1.jpg',
-                    'project3-2.jpg',
-                    'project3-3.jpg',
-                    'project3-4.jpg',
-                    'project3-5.jpg',
-                    'project3-6.jpg',
-                ],
-                project4: [
-                    'project4-1.jpg',
-                    'project4-2.jpg',
-                    'project4-3.jpg',
-                    'project4-4.jpg',
-                    'project4-5.jpg',
-                    'project4-6.jpg',
-                ],
-                project5: [
-                    'project5-1.jpg',
-                    'project5-2.jpg',
-                    'project5-3.jpg',
-                    'project5-4.jpg',
-                    'project5-5.jpg',
-                    'project5-6.jpg',
-                ],
-                project6: [
-                    'project6-1.jpg',
-                    'project6-2.jpg',
-                    'project6-3.jpg',
-                    'project6-4.jpg',
-                    'project6-5.jpg',
-                    'project6-6.jpg',
-                ],
-            };
-
-            images[project].forEach(src => {
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = `Image of ${project}`;
-                img.style.display = 'block';
-                img.style.margin = '5px auto';
-                img.style.maxWidth = '100%';
-                imageContainer.appendChild(img);
-            });
-        }
+    .image-container img {
+        display: block;
+        margin: 5px auto;
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
     function toggleSidebar() {
           var sidebar = document.getElementById("sidebar");
           if (sidebar.style.display === "block") {
