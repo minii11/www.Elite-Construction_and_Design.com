@@ -348,6 +348,17 @@
             max-width: 400px;
         }
     }
+          /* Show images when the corresponding checkbox is checked */
+    input[type="checkbox"]:checked + label + .image-container {
+        display: block; /* Show the container */
+    }
+
+    .image-container img {
+        display: block;
+        margin: 5px auto;
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
     </style>
 </head>
 <body>
@@ -669,17 +680,7 @@
 
     setInterval(showNextImage, 2000);
 
-/* Show images when the corresponding checkbox is checked */
-    input[type="checkbox"]:checked + label + .image-container {
-        display: block;
-    }
 
-    .image-container img {
-        display: block;
-        margin: 5px auto;
-        max-width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
     function toggleSidebar() {
           var sidebar = document.getElementById("sidebar");
           if (sidebar.style.display === "block") {
