@@ -1,1 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Construction and Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: auto; /* Maintain original height */
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: auto; /* Maintain original aspect ratio */
+        }
+        .story-container {
+            padding: 20px;
+            background-color: #e6f2e6; /* Lightest green background */
+            text-align: center;
+            margin-top: 20px;
+        }
+        .story {
+            display: none;
+        }
+        .story.active {
+            display: block;
+        }
+        h2 {
+            font-family: 'Lucida Handwriting', cursive; /* Gentle calligraphy */
+            color: yellow; /* Yellow color for headings */
+            margin-bottom: 10px;
+        }
+        p {
+            color: grey; /* Grey text for other content */
+            font-size: 16px; /* Adjust text size for readability */
+            line-height: 1.5; /* Improve line spacing */
+            max-width: 600px; /* Limit width for better readability */
+            margin: 0 auto; /* Center the text */
+        }
+        .section {
+            margin: 20px 0; /* Space between sections */
+        }
+        .bold {
+            font-weight: bold; /* Class for bold text */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            font-weight: bold; /* Make buttons bold */
+        }
+    </style>
+</head>
+<body>
 
+<div class="slideshow-container">
+    <div class="slide">
+        <img src="image1.jpg" alt="Project 1">
+    </div>
+    <div class="slide">
+        <img src="image2.jpg" alt="Project 2">
+    </div>
+    <div class="slide">
+        <img src="image3.jpg" alt="Project 3">
+    </div>
+    <div class="slide">
+        <img src="image4.jpg" alt="Project 4">
+    </div>
+    <div class="slide">
+        <img src="image5.jpg" alt="Project 5">
+    </div>
+    <div class="slide">
+        <img src="image6.jpg" alt="Project 6">
+    </div>
+    <div class="slide">
+        <img src="image7.jpg" alt="Project 7">
+    </div>
+</div>
+
+<section class="section" style="background-color: #FFF9C4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px;"></section>
+    <div class="content" style="background-color: #FFF9C4; padding: 20px; border-radius: 5px;">
+        <div class="section-title" style="color: #FFD700; font-size: 2.5em; text-align: center; margin-bottom: 15px; font-family: 'Lucida Handwriting', cursive; font-weight: bold; text-shadow: 1px 1px 3px #4A9F1A;">
+            Elite's Intro
+        </div>
+
+        <p style="color: #4CAF50; font-size: 1.2em; line-height: 1.6; margin-bottom: 15px;">
+            Welcome to <strong style="color: #FFD700;">Elite Construction and Design</strong>, Lahore's leading construction and design firm with over <span style="font-weight: bold; color: #4A9F1A;">35 years of expertise</span>. We specialize in transforming spaces through top-tier craftsmanship and innovative design solutions.
+        </p>
+
+        <p style="color: #4CAF50; font-size: 1.2em; line-height: 1.6; margin-bottom: 15px;">
+            At <strong style="color: #FFD700;">Elite Construction and Design</strong>, we believe your vision deserves the best. Our experienced team works closely with you to ensure every detail reflects your unique style and needs.
+        </p>
+
+        <p style="color: #4CAF50; font-size: 1.2em; line-height: 1.6; margin-bottom: 15px;">
+            Whether you’re looking to build your <strong style="color: #FFD700;">dream home</strong>, renovate an existing space, or explore cutting-edge designs, we are here to turn your aspirations into reality.
+        </p>
+
+        <p style="color: #4CAF50; font-size: 1.2em; line-height: 1.6;">
+            Choose <strong style="color: #FFD700;">Elite</strong> for <em>unparalleled service</em> and excellence in every project.
+        </p>
+    </div>
+</section>
+
+
+<section style="background-color: #FFF9C4; border-radius: 10px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto;"></section>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="color: #4CAF50; font-size: 1.9em; font-family: 'Lucida Handwriting', cursive;">
+            Vision for the Future
+        </h2>
+        <p style="color: #4A9F1A; font-size: 1.2em;">Building Tomorrow, Today</p>
+    </div>
+
+    <ul style="list-style-type: none; padding: 0; font-family: 'Poppins', sans-serif;">
+        <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: white; font-weight: bold; font-size: 1.5em;">E</div>
+            <div>
+                <strong style="color: #4CAF50;">Innovative Designs:</strong>
+                <p style="color: #555; font-size: 1em;">We are committed to integrating cutting-edge technology and sustainable practices in every project, ensuring a greener future.</p>
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: white; font-weight: bold; font-size: 1.5em;">L</div>
+            <div>
+                <strong style="color: #4CAF50;">Client-Centric Approach:</strong>
+                <p style="color: #555; font-size: 1em;">Your vision is our priority. We collaborate closely with clients to bring unique ideas to life, ensuring satisfaction at every step.</p>
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: white; font-weight: bold; font-size: 1.5em;">I</div>
+            <div>
+                <strong style="color: #4CAF50;">Transformational Projects:</strong>
+                <p style="color: #555; font-size: 1em;">We aim to create iconic structures that not only serve their purpose but also inspire and elevate the communities around them.</p>
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: white; font-weight: bold; font-size: 1.5em;">T</div>
+            <div>
+                <strong style="color: #4CAF50;">Community Engagement:</strong>
+                <p style="color: #555; font-size: 1em;">Our commitment extends beyond construction; we actively engage in local initiatives to foster community development and support.</p>
+            </div>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: white; font-weight: bold; font-size: 1.5em;">E</div>
+            <div>
+                <strong style="color: #4CAF50;">Skill Development:</strong>
+                <p style="color: #555; font-size: 1em;">Investing in our team’s growth ensures we maintain excellence and adapt to the evolving industry landscape.</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section style="background-color: #FFF9C4; border-radius: 10px; margin-bottom: 20px; border: 2px solid #388E3C; position: relative;"></section>
+    <div class="section-title" style="color:yellow; font-size: 1.9em; text-align: center; margin-bottom: 15px; font-family: 'Dancing Script', cursive; font-weight: bold;">
+        Our Journey: The Story of Elite Construction and Design
+    </div>
+    
+    <div style="border-top: 2px solid #388E3C; padding: 10px; margin-bottom: 15px;">
+        <h3 style="color: grey; font-family: 'Arial Black', sans-serif; font-size: 1.4em; margin-top: 0; font-weight: bold;">
+            Our Beginning
+        </h3>
+        <p style="color: grey; font-size: 0.9em; line-height: 1.6; font-family: 'Poppins', sans-serif;">
+            Elite Construction and Design began its journey over 35 years ago in Lahore, founded by <strong>Muhammad Hamayoun Salman</strong>, who envisioned a construction firm that prioritizes quality and client satisfaction. Starting as a small contractor, <strong>Hamayoun Salman</strong> focused on residential projects, quickly earning a reputation for exceptional craftsmanship and integrity.
+        </p>
+    </div>
+    
+    <div style="border-top: 2px solid #388E3C; padding: 10px; margin-bottom: 15px;">
+        <h3 style="color: grey; font-family: 'Arial Black', sans-serif; font-size: 1.4em; margin-top: 0; font-weight: bold;">
+            Growth and Expansion
+        </h3>
+        <p style="color: grey; font-size: 0.9em; line-height: 1.6; font-family: 'Poppins', sans-serif;">
+            As word spread, our ambition grew. We expanded our services to include commercial construction, renovations, and innovative designs, bringing together a skilled team of architects and engineers who share our commitment to excellence. Each project reflects our dedication to quality, ensuring that every detail meets the highest standards.
+        </p>
+    </div>
+    
+    <div style="border-top: 2px solid #388E3C; padding: 10px; margin-bottom: 15px;">
+        <h3 style="color: grey; font-family: 'Arial Black', sans-serif; font-size: 1.4em; margin-top: 0; font-weight: bold;">
+            Community Engagement
+        </h3>
+        <p style="color: grey; font-size: 0.9em; line-height: 1.6; font-family: 'Poppins', sans-serif;">
+            Community engagement has always been a cornerstone of our philosophy. We actively participate in local initiatives, believing that our success is tied to the well-being of the communities we serve.
+        </p>
+    </div>
+    
+    <div style="border-top: 2px solid #388E3C; padding: 10px; margin-bottom: 15px;">
+        <h3 style="color: grey; font-family: 'Arial Black', sans-serif; font-size: 1.4em; margin-top: 0; font-weight: bold;">
+            Looking Ahead
+        </h3>
+        <p style="color: grey; font-size: 0.9em; line-height: 1.6; font-family: 'Poppins', sans-serif;">
+            Today, Elite Construction and Design is a trusted name in Lahore’s construction industry. We are excited about the future, continually exploring sustainable practices and cutting-edge technologies to enhance our services. Our mission remains clear: to create spaces that inspire, enrich lives, and stand the test of time.
+        </p>
+    </div>
+    
+</section>
+
+<div class="story-container">
+    <div class="story active" id="story1">
+        <h2>The Dream Home Transformation</h2>
+        <div class="section"><span class="bold">Client:</span> Ayesha and Ahmed</div>
+        <div class="section"><span class="bold">Challenge:</span> They wanted a spacious, modern home for their growing family but struggled to find one that fit their needs.</div>
+        <div class="section"><span class="bold">Solution:</span> We collaborated with them to design and build a custom home tailored just for their family. From open living spaces to a lovely garden, every detail was carefully planned.</div>
+        <div class="section"><span class="bold">Outcome:</span> They moved into their dream home within six months, loving how it reflected their style and needs.</div>
+    </div>
+    <div class="story" id="story2">
+        <h2>Reviving a Heritage Property</h2>
+        <div class="section"><span class="bold">Client:</span> Mr. Khan</div>
+        <div class="section"><span class="bold">Challenge:</span> He inherited a century-old family home that needed a lot of work to update its features while keeping its charm intact.</div>
+        <div class="section"><span class="bold">Solution:</span> Our team created a renovation plan that preserved the home’s historical elements while adding modern amenities. We ensured that the new design honored the property's heritage.</div>
+        <div class="section"><span class="bold">Outcome:</span> The renovation brought new life to the home, allowing Mr. Khan to keep family traditions alive while enjoying modern comforts. He was thrilled with the results!</div>
+    </div>
+    <div class="story" id="story3">
+        <h2>A Commercial Success</h2>
+        <div class="section"><span class="bold">Client:</span> Green Leaf Café</div>
+        <div class="section"><span class="bold">Challenge:</span> They needed to expand to serve more customers but faced zoning laws and budget issues.</div>
+        <div class="section"><span class="bold">Solution:</span> We worked with local authorities to navigate these challenges and designed a smart layout that maximized their space without breaking the budget. Our design increased efficiency and comfort for customers.</div>
+        <div class="section"><span class="bold">Outcome:</span> The new design increased seating capacity by 50%, boosting customer satisfaction and sales. The owner praised our team for their creativity and support.</div>
+    </div>
+    <div class="story" id="story4">
+        <h2>Sustainable Living</h2>
+        <div class="section"><span class="bold">Client:</span> The Maliks</div>
+        <div class="section"><span class="bold">Challenge:</span> They wanted an eco-friendly home that reduced energy costs but didn’t know where to start.</div>
+        <div class="section"><span class="bold">Solution:</span> We designed a sustainable home using energy-efficient materials and solar panels. Our team guided them through each step, ensuring their dream of an eco-friendly living space was realized.</div>
+        <div class="section"><span class="bold">Outcome:</span> The family now enjoys lower utility bills and a comfortable environment, feeling proud of their contribution to sustainability.</div>
+    </div>
+    <div class="story" id="story5">
+        <h2>A Cozy Family Retreat</h2>
+        <div class="section"><span class="bold">Client:</span> Sara and Bilal</div>
+        <div class="section"><span class="bold">Challenge:</span> They wanted a cozy family retreat in their backyard but had limited space and a tight budget.</div>
+        <div class="section"><span class="bold">Solution:</span> We designed a compact yet functional area that incorporated a small deck, seating, and a beautiful garden. The design was tailored to fit their needs and space constraints.</div>
+        <div class="section"><span class="bold">Outcome:</span> The couple now enjoys family gatherings and quiet evenings in their new retreat, appreciating our creativity and efficiency in transforming their backyard.</div>
+    </div>
+
+    <div class="button-container">
+        <button class="prev" onclick="changeStory(-1)">&#10094;</button>
+        <button class="next" onclick="changeStory(1)">&#10095;</button>
+    </div>
+</div>
+
+<section style="max-width: 600px; margin: auto; padding: 20px;"></section>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="color: #4CAF50; font-size: 2.5em; font-family: 'Lucida Handwriting', cursive;">Our Vision</h2>
+    </div>
+
+    <!-- Mission Statement Card -->
+    <div style="background-color: #FFFDE7; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+        <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; color: white; font-weight: bold; font-size: 1.5em;">E</div>
+        <h3 style="color: #4CAF50; margin: 10px 0;">Mission</h3>
+        <p style="color: #555;">"Our mission is to deliver unparalleled construction and design services that enhance your lifestyle and exceed your expectations."</p>
+    </div>
+
+    <!-- Core Values Card -->
+    <div style="background-color: #FFFDE7; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+        <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; color: white; font-weight: bold; font-size: 1.5em;">C</div>
+        <h3 style="color: #4CAF50; margin: 10px 0;">Core Values</h3>
+        <ul style="list-style-type: none; padding: 0; text-align: left;">
+            <li style="color: #555;">Integrity: "We uphold honesty and transparency in all our dealings."</li>
+            <li style="color: #555;">Quality: "We use premium materials and skilled craftsmanship in every project."</li>
+            <li style="color: #555;">Customer Focus: "Your satisfaction is our top priority."</li>
+        </ul>
+    </div>
+
+    <!-- Our Services Card -->
+    <div style="background-color: #FFFDE7; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center;">
+        <div style="display: inline-block; width: 40px; height: 40px; background-color: #4CAF50; border-radius: 50%; text-align: center; line-height: 40px; color: white; font-weight: bold; font-size: 1.5em;">D</div>
+        <h3 style="color: #4CAF50; margin: 10px 0;">Our Services</h3>
+        <p style="color: #555;">"From home construction to innovative designs, we provide a range of services tailored to your needs."</p>
+    </div>
+</section>
+
+<section style="max-width: 600px; margin: auto; background-color: #D8F9B5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"></section>
+    <h2 style="color: #D8F9B5;  text-align: center; font-family: 'Lucida Handwriting', cursive; padding: 20px; margin: 0;">Contact Us</h2>
+
+    <div style="padding: 20px;">
+        <div style="margin-bottom: 20px;">
+            <p style="color: #555; font-size: 16px;">
+                <strong>Location:</strong> Design House 17D, 3rd Floor Commercial Area, DHA EME Phase 12, Lahore, Punjab, Pakistan
+            </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <p style="color: #555; font-size: 16px;">
+                <strong>Contact:</strong> (92)-3418448889, (92)-3223237533 | 
+                <a href="mailto:eliteconstruction3237@gmail.com" style="color:green;">hamayounsalman3237@gmail.com</a>
+            </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <p style="color: #555; font-size: 16px;">
+                <strong>Company's Owner:</strong> Muhammad Hamayoun Salman
+            </p>
+        </div>
+
+        <div>
+            <p style="color: #555; font-size: 16px;">
+                <strong>Consult:</strong> <a href="https://wa.me/923223237533" style="color: #007bff;">Elite Construction & Design</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    let storyIndex = 0;
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex++;
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        slides[slideIndex].style.display = "block";
+
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function changeStory(n) {
+        const stories = document.querySelectorAll('.story');
+        stories[storyIndex].classList.remove('active');
+        storyIndex += n;
+        if (storyIndex >= stories.length) { storyIndex = 0; }
+        if (storyIndex < 0) { storyIndex = stories.length - 1; }
+        stories[storyIndex].classList.add('active');
+    }
+
+    showSlides();
+</script>
+
+</body>
+</html>
