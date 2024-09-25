@@ -5,6 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Construction and Design</title>
     <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: brown;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -78,27 +170,46 @@
 </head>
 <body>
 
+    <header>
+        <img src="image.jpg" alt="Elite Construction">
+        <h1>Elite Construction</h1>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="construction.html">Construction</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="renovation.html">Renovation</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="designs.html">Designs</a>
+        <a href="Our Works">Our Works</a>
+        <a href="about.html">About</a>
+        <a href="Get Service.html">Get Service</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
 <div class="slideshow-container">
     <div class="slide">
-        <img src="image1.jpg" alt="Project 1">
+        <img src="image about1.jpg" alt="Project 1">
     </div>
     <div class="slide">
-        <img src="image2.jpg" alt="Project 2">
+        <img src="image about2.jpg" alt="Project 2">
     </div>
     <div class="slide">
-        <img src="image3.jpg" alt="Project 3">
+        <img src="image about3.jpg" alt="Project 3">
     </div>
     <div class="slide">
-        <img src="image4.jpg" alt="Project 4">
+        <img src="image about4.jpg" alt="Project 4">
     </div>
     <div class="slide">
-        <img src="image5.jpg" alt="Project 5">
+        <img src="image about5.jpg" alt="Project 5">
     </div>
     <div class="slide">
-        <img src="image6.jpg" alt="Project 6">
+        <img src="image about6.jpg" alt="Project 6">
     </div>
     <div class="slide">
-        <img src="image7.jpg" alt="Project 7">
+        <img src="image about7.jpg" alt="Project 7">
     </div>
 </div>
 
@@ -323,6 +434,16 @@
 </section>
 
 <script>
+
+function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
+
     let slideIndex = 0;
     let storyIndex = 0;
 
@@ -346,6 +467,8 @@
     }
 
     showSlides();
+
+
 </script>
 
 </body>
