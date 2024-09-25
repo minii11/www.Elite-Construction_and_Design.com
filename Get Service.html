@@ -424,42 +424,56 @@
     <strong style="color: #4caf50; font-size: 18px;">Get Your Dream Home Started - Share Your Plot Details Now!</strong>
     <br><br>
     <div class="form-container" style="width: 100%; max-width: 600px; margin: auto;">
-        <form id="contactForm" action="mailto:eliteconstruction3237@gmail.com?subject=Consultation" method="POST" enctype="text/plain" onsubmit="redirectAfterSubmit()" style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); width: 100%;">
-            <label for="name" style="font-weight: bold;">Name:</label>
-            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+        <form id="contactForm" action="mailto:eliteconstruction3237@gmail.com?subject=Consultation" method="POST" enctype="text/plain" onsubmit="redirectAfterSubmit()" style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); width: 100%; display: flex; flex-wrap: wrap; gap: 15px;">
+            
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="name" style="font-weight: bold;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            </div>
 
-            <label for="address" style="font-weight: bold;">Property Address:</label>
-            <input type="text" id="address" name="address" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="address" style="font-weight: bold;">Property Address:</label>
+                <input type="text" id="address" name="address" required style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            </div>
 
-            <label for="service" style="font-weight: bold;">Type of Service Needed:</label>
-            <select id="service" name="service" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
-                <option value="">Select an option</option>
-                <option value="Construction">Construction</option>
-                <option value="Renovation">Renovation</option>
-                <option value="Designing">Designing</option>
-                <option value="Rentals">Rentals</option>
-                <option value="Real-Estate">Real-Estate</option>
-                <option value="Other">Other</option>
-            </select>
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="service" style="font-weight: bold;">Type of Service Needed:</label>
+                <select id="service" name="service" required style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+                    <option value="">Select an option</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Renovation">Renovation</option>
+                    <option value="Designing">Designing</option>
+                    <option value="Rentals">Rentals</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
 
-            <label for="otherService" style="font-weight: bold;">If Other, please specify:</label>
-            <input type="text" id="otherService" name="otherService" style="display:none; width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="budget" style="font-weight: bold;">Budget Range:</label>
+                <input type="text" id="budget" name="budget" required style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            </div>
 
-            <label for="budget" style="font-weight: bold;">Budget Range:</label>
-            <input type="text" id="budget" name="budget" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="timeline" style="font-weight: bold;">Timeline for the Project:</label>
+                <input type="text" id="timeline" name="timeline" required style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            </div>
 
-            <label for="timeline" style="font-weight: bold;">Timeline for the Project:</label>
-            <input type="text" id="timeline" name="timeline" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;">
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="requirements" style="font-weight: bold;">Specific Requirements or Preferences:</label>
+                <textarea id="requirements" name="requirements" rows="3" style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;"></textarea>
+            </div>
 
-            <label for="requirements" style="font-weight: bold;">Specific Requirements or Preferences:</label>
-            <textarea id="requirements" name="requirements" rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #4caf50; border-radius: 5px;"></textarea>
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <label for="comments" style="font-weight: bold;">Any Additional Comments or Questions:</label>
+                <textarea id="comments" name="comments" rows="3" style="width: 100%; padding: 10px; border: 2px solid #4caf50; border-radius: 5px;"></textarea>
+            </div>
 
-            <label for="comments" style="font-weight: bold;">Any Additional Comments or Questions:</label>
-            <textarea id="comments" name="comments" rows="3" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 2px solid #4caf50; border-radius: 5px;"></textarea>
-
-            <button type="submit" style="background-color: #4caf50; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s; width: 100%;">
-                Submit
-            </button>
+            <div style="flex: 1 1 100%; max-width: 100%;">
+                <button type="submit" style="background-color: #4caf50; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s; width: 100%;">
+                    Submit
+                </button>
+            </div>
         </form>
     </div>
 </div>
