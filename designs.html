@@ -6,6 +6,99 @@
     <title>Elite Construction and Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute items with space between them */
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 70px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #355E3B;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .menu-icon {
+            font-size: 40px;
+            cursor: pointer;
+            color: #355E3B;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: #FBE106;
+            color: brown;
+            z-index: 999;
+        }
+
+        .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: brown;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid green; /* Green outline inside sidebar links */
+}
+
+        .sidebar a:hover {
+            background-color: lightyellow;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                font-size: 35px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -59,34 +152,48 @@
 </head>
 <body>
 
+    <img src="image.jpg" alt="Elite Construction">
+    <h1>Elite Construction</h1>
+    <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+</header>
+
+<div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="Get Service.html">Get Service</a>
+    <a href="contact.html">Contact</a>
+    <a href="Our Works">Our Works</a>
+    <a href="about.html">About</a>
+</div>
+
+
 <!-- Slideshow -->
 <div class="slideshow-container">
     <div class="slides">
-        <img src="image1.jpg" alt="Design 1">
+        <img src="image slidedes1.jpg" alt="Design 1">
         <div class="slide-text">Design 1</div>
     </div>
     <div class="slides">
-        <img src="image2.jpg" alt="Design 2">
+        <img src="image slidedes2.jpg" alt="Design 2">
         <div class="slide-text">Design 2</div>
     </div>
     <div class="slides">
-        <img src="image3.jpg" alt="Design 3">
+        <img src="image slidedes3.jpg" alt="Design 3">
         <div class="slide-text">Design 3</div>
     </div>
     <div class="slides">
-        <img src="image4.jpg" alt="Design 4">
+        <img src="image slidedes4.jpg" alt="Design 4">
         <div class="slide-text">Design 4</div>
     </div>
     <div class="slides">
-        <img src="image5.jpg" alt="Design 5">
+        <img src="image slidedes5.jpg" alt="Design 5">
         <div class="slide-text">Design 5</div>
     </div>
     <div class="slides">
-        <img src="image6.jpg" alt="Design 6">
+        <img src="image slidedes6.jpg" alt="Design 6">
         <div class="slide-text">Design 6</div>
     </div>
     <div class="slides">
-        <img src="image7.jpg" alt="Design 7">
+        <img src="image slidedes7.jpg" alt="Design 7">
         <div class="slide-text">Design 7</div>
     </div>
 </div>
@@ -505,6 +612,15 @@
 </div>
 
 <script>
+
+function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          if (sidebar.style.display === "block") {
+              sidebar.style.display = "none";
+          } else {
+              sidebar.style.display = "block";
+          }
+      }
     let slideIndex = 0;
     const slides = document.getElementsByClassName("slides");
 
@@ -566,3 +682,4 @@
 
 </body>
 </html>
+
